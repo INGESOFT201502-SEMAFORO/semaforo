@@ -1,7 +1,5 @@
 package semaforo
 
-
-
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -10,6 +8,59 @@ class ClienteController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    def inicio = {
+        def clientes = Cliente.list()
+        [clientes: clientes]
+    }
+
+    def register(){
+        if (session.cliente != null){
+            flash.message = "error, ya esta registrado"
+        }else{
+            respond new Cliente(params)
+        }
+    }
+
+    def login(){
+        def cliente = Cliente.findByCorreoAndPassword(params.correo, params.password)
+        if (cliente == null){
+            flash.message = "usuario no registrado"
+            redirect action: inicio
+        }else{
+            flash.message = "inicio de sesion correcto ${cliente.correo}"
+            session.cliente = cliente
+            redirect action: inicio
+        }
+
+    }
+
+    @Transactional
+    def registerLogin(Cliente clienteInstance) {
+        if (clienteInstance == null) {
+            notFound()
+            return
+        }
+
+        if (clienteInstance.hasErrors()) {
+            respond clienteInstance.errors, view:'create'
+            return
+        }
+
+        clienteInstance.save flush:true
+
+        session.cliente = clienteInstance
+        //redirect (action: "show", id: clienteInstance.id)
+        redirect action: inicio
+    }
+
+    def logout(){
+        session.cliente = null
+        flash.message = "Cerrado de session correctamente ${session.usuario.nombre}"
+        render view: "../home"
+    }
+
+    //***********************
+    // metodos de scaffolding
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Cliente.list(params), model:[clienteInstanceCount: Cliente.count()]
@@ -41,6 +92,7 @@ class ClienteController {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'cliente.label', default: 'Cliente'), clienteInstance.id])
                 redirect clienteInstance
+
             }
             '*' { respond clienteInstance, [status: CREATED] }
         }
