@@ -7,6 +7,7 @@ class Usuario {
 	String nombre
 	String usuario
 	String correo
+	String password
 	int edad
 	long cedula
 
@@ -15,6 +16,7 @@ class Usuario {
 		nombre  maxSize:50, blank: false, nullable: false
 		usuario maxSize:50, blank: false, nullable: false
 		correo maxSize:50, blank: false, nullable: false
+		password blank: false, nullable: false
 		edad min: 18, blank: false, nullable: false
 		cedula unique: true, blank: false, nullable: false
 	}
