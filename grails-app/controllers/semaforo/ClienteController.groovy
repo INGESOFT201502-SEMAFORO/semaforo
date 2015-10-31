@@ -54,8 +54,8 @@ class ClienteController {
     }
 
     def logout(){
+        flash.message = "Cerrado de session correctamente ${session.cliente.nombre}"
         session.cliente = null
-        flash.message = "Cerrado de session correctamente ${session.usuario.nombre}"
         render view: "../home"
     }
 
