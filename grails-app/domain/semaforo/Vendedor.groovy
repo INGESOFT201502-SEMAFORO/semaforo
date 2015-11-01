@@ -4,9 +4,12 @@ import groovy.json.*
 
 class Vendedor extends Usuario {
 	
-	double salario 
+	double salario
 	
-	static hasMany = [cita:Cita]
+	static hasMany = [cita:Cita, seguro:Seguro]
+
+	static belongsTo = [empresa: Empresa]
+
     static constraints = { 
 		
 		salario blank:false

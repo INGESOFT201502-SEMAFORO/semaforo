@@ -33,7 +33,8 @@
         <div class="col-md-4">
             <h2>Registrarse como vendedor</h2>
             <p>puedes registrarte en nuestra aplicacion para ofrecer tus servicios </p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <g:link class="btn btn-primary" controller="vendedor" action="register">Registrarse</g:link>
+            %{--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>--}%
         </div>
         <div class="col-md-4">
             <h2>Heading</h2>

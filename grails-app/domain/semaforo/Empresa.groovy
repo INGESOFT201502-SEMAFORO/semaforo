@@ -5,7 +5,7 @@ class Empresa {
 	String direccion
 	long telefono
 	
-	static belongsTo = [vendedor: Vendedor]
+	static hasMany = [vendedores: Vendedor]
 	
     static constraints = {
 		nombre blank: false, nullable: false, maxSize: 50
