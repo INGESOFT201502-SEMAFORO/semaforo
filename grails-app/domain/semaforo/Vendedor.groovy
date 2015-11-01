@@ -3,10 +3,11 @@ package semaforo
 import groovy.json.*
 
 class Vendedor extends Usuario {
-	
-	double salario 
-	
+
+	double salario
+	static belongsTo = [empresa: Empresa]
 	static hasMany = [cita:Cita]
+
     static constraints = { 
 		
 		salario blank:false

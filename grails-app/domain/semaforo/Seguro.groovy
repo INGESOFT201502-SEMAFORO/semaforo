@@ -5,6 +5,8 @@ class Seguro {
 	Date fechaCompra
 	Date fechaVencimiento
 	Double valor
+
+	static belongsTo = [vehiculo: Vehiculo, empresa: Empresa]
 	
     static constraints = {
 		fechaCompra blank: false, nullable: false, date: true
