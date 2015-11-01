@@ -6,7 +6,7 @@ class Taller {
 	String direccion
 	String especialidad
 	
-	//static belongsTo = [operario: Operario]
+	static hasMany = [operarios: Operario, vehiculos: Vehiculo]
 	
     static constraints = {
 		nombre blank: false, nullable: false, maxSize: 50

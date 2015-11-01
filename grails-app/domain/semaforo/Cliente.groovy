@@ -5,7 +5,8 @@ class Cliente extends Usuario{
 
 	String tarjetaCredito
 	
-	//static hasMany = [citas:Cita]
+	static hasMany = [citas:Cita, vehiculos: Vehiculo]
+
     static constraints = { 
 		tarjetaCredito maxSize: 50
     }

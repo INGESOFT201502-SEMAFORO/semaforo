@@ -39,8 +39,9 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">Quienes somos?</a></li>
+                    <li><a href="#contact">Contáctenos</a></li>
+                    <li><a href="#team">Equipo</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -81,13 +82,13 @@
             </div><!--/.navbar-collapse -->
         </div>
     </nav>
-    <div class="container theme-showcase" role="main">
+    <div class="container" role="main">
 
         <g:layoutBody/>
 
         <hr>
         <footer>
-            <p>&copy; Company 2015</p>
+            <p>&copy; Universidad Nacional de Colombia, 2015</p>
         </footer>
     </div>
 
