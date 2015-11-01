@@ -9,12 +9,71 @@ import spock.lang.Specification
 @TestFor(Cita)
 class CitaSpec extends Specification {
 
-    def setup() {
+    void "el dia no puede ser null"() {
+        when :
+        def cita = new Cita(
+            dia: null,
+            hora: '11:58:00',
+            lugar: "Centro Andino"
+        )
+        then:
+        !cita.validate()
     }
 
-    def cleanup() {
+    void "el dia no puede ser vacio"() {
+        when :
+        def cita = new Cita(
+                dia: "",
+                hora: "11:58:00",
+                lugar: "Centro Andino"
+        )
+        then:
+        !cita.validate()
     }
 
-    void "test something"() {
+    void "el hora no puede ser null"() {
+        when :
+        def cita = new Cita(
+                dia: new Date(),
+                hora: null,
+                lugar: "Centro Andino"
+        )
+        then:
+        !cita.validate()
     }
+
+    void "la hora no puede ser vacia"() {
+        when :
+        def cita = new Cita(
+                dia: new Date(),
+                hora: "" ,
+                lugar: "Centro Andino"
+        )
+        then:
+        !cita.validate()
+    }
+
+    void "el lugar no puede ser null"() {
+        when :
+        def cita = new Cita(
+                dia: new Date(),
+                hora: "11:58:00",
+                lugar: null
+        )
+        then:
+        !cita.validate()
+    }
+
+
+    void "el lugar no puede ser vacio"() {
+        when :
+        def cita = new Cita(
+                dia: new Date(),
+                hora: "11:58:00",
+                lugar:"Centro Andino"
+        )
+        then:
+        !cita.validate()
+    }
+
 }
