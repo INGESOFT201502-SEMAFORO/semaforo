@@ -8,6 +8,7 @@ class ClienteController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+
     def inicio = {
         def clientes = Cliente.list()
         [clientes: clientes]
