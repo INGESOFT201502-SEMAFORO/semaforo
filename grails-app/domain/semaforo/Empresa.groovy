@@ -5,7 +5,7 @@ class Empresa {
 	String direccion
 	long telefono
 	
-	static hasMany = [vendedores: Vendedor]
+	static hasMany = [vendedores: Vendedor, seguros: Seguro]
 	
     static constraints = {
 		nombre blank: false, nullable: false, maxSize: 50

@@ -14,11 +14,11 @@
 
 <body>
 <!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
+<div class="jumbotron jumbotronBack">
     <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <h1>Bienvenido a Semaforo</h1>
+        <p>Registra tu vehículo y adquiera se seguro ahora!</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Ver más</a></p>
     </div>
 </div>
 
@@ -26,20 +26,20 @@
     <!-- Example row of columns -->
     <div class="row">
         <div class="col-md-4">
-            <h2>Registrarse como cliente</h2>
-            <p>puedes registrarte en nuestra apliacion y empezar a disfrutar de nuestros servicios </p>
+            <h2><font size=5>Regístrate como Cliente</font></h2>
+            <p>puedes registrarte y empezar a disfrutar de nuestros servicios </p>
             <g:link class="btn btn-primary" controller="cliente" action="register">Registrarse</g:link>
         </div>
         <div class="col-md-4">
-            <h2>Registrarse como vendedor</h2>
-            <p>puedes registrarte en nuestra aplicacion para ofrecer tus servicios </p>
+            <h2><font size=5>Regístrate como Asesor</font></h2>
+            <p>puedes registrarte y ofrecer tus servicios </p><br>
             <g:link class="btn btn-primary" controller="vendedor" action="register">Registrarse</g:link>
-            %{--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>--}%
         </div>
         <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <h2><font size=5>Registra tu taller</font></h2>
+            <p>
+            <p>Registra tu taller y ofrece tus servicios de mantenimiento para vehículos</p>
+            <g:link class="btn btn-primary" controller="taller" action="register">Registrarse</g:link>
         </div>
     </div>
 
