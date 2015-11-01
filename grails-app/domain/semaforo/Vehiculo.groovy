@@ -6,6 +6,9 @@ class Vehiculo {
 	int modelo
 	String color
 	String marca
+
+	static belongsTo = [cliente: Cliente]
+	static hasOne = [seguro: Seguro]
 	
     static constraints = {
 		placa unique: true, blank: false, nullable: false
