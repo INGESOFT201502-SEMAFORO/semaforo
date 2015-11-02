@@ -9,56 +9,36 @@ import spock.lang.Specification
 @TestFor(Cita)
 class CitaSpec extends Specification {
 
-    void "el dia no puede ser null"() {
+    void "La fecha no puede ser null"() {
         when :
         def cita = new Cita(
-            dia: null,
-            hora: '11:58:00',
-            lugar: "Centro Andino"
+            fecha: null,
+            lugar: "Centro Andino",
+            tarjetaCredito:"4916049558035384"
         )
         then:
         !cita.validate()
     }
 
-    void "el dia no puede ser vacio"() {
+    void "La fecha debe ser valida"() {
         when :
         def cita = new Cita(
-                dia: "",
-                hora: "11:58:00",
-                lugar: "Centro Andino"
+                fecha: 1,
+                lugar: "Centro Andino",
+                tarjetaCredito:"4916049558035384"
         )
         then:
         !cita.validate()
     }
 
-    void "el hora no puede ser null"() {
-        when :
-        def cita = new Cita(
-                dia: new Date(),
-                hora: null,
-                lugar: "Centro Andino"
-        )
-        then:
-        !cita.validate()
-    }
-
-    void "la hora no puede ser vacia"() {
-        when :
-        def cita = new Cita(
-                dia: new Date(),
-                hora: "" ,
-                lugar: "Centro Andino"
-        )
-        then:
-        !cita.validate()
-    }
 
     void "el lugar no puede ser null"() {
         when :
         def cita = new Cita(
-                dia: new Date(),
-                hora: "11:58:00",
-                lugar: null
+                fecha: new Date(),
+                lugar: null,
+                tarjetaCredito:"9916049553037381"
+
         )
         then:
         !cita.validate()
@@ -68,9 +48,9 @@ class CitaSpec extends Specification {
     void "el lugar no puede ser vacio"() {
         when :
         def cita = new Cita(
-                dia: new Date(),
-                hora: "11:58:00",
-                lugar:"Centro Andino"
+                fecha: new Date(),
+                lugar:"",
+                tarjetaCredito:"9916049553034381"
         )
         then:
         !cita.validate()
