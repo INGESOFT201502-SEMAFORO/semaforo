@@ -26,7 +26,7 @@
 <!-- NAVBAR
 ================================================== -->
 <body>
-    <nav class="navbar- navbar-collapse collapse in" aria-expanded="true">
+    <nav class="navbar navbar-collapse collapse in" aria-expanded="true">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -41,7 +41,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="#about">Quienes somos?</a></li>
                     <li><a href="#contact">Contáctenos</a></li>
-                    <li><a href="#team">Equipo</a></li>
+                    <li><a href="${createLink(uri: '/equipo')}">Equipo</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                         <ul class="dropdown-menu">
