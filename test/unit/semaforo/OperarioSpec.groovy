@@ -10,12 +10,12 @@ import spock.lang.Specification
 class OperarioSpec extends Specification {
 
     void "Especialidad no puede ser vacia"() {
-        def operario = new Operario(
+        def user = new Operario(
                 especialidad: "",
                 nombre: "David",
-                
-
+                //direccion: "carrera 31c # 1H- 61"
         )
+
 
     }
 }
