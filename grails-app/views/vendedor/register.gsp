@@ -31,6 +31,8 @@
     </g:if>
     <g:else>
         <h1>Formulario de Registro Vendedores</h1>
+        <div class="row">
+        <div class="col-md-6">
         <g:form url="[resource: vendedorInstance, action:'registerLogin']" >
             <fieldset class="form">
                 <g:render template="form"/>
@@ -39,6 +41,8 @@
                 <g:submitButton name="create" class="btn btn-success" value="Registrarse"/>
             </fieldset>
         </g:form>
+        </div>
+        </div>
     </g:else>
 </div>
 </body>

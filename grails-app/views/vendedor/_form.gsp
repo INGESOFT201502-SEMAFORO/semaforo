@@ -1,6 +1,5 @@
 <%@ page import="semaforo.Vendedor" %>
 
-
 <div class="form-group">
 <div class="fieldcontain ${hasErrors(bean: vendedorInstance, field: 'nombre', 'error')} required">
 	<label for="nombre">
