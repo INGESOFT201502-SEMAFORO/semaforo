@@ -17,7 +17,7 @@
 <div class="jumbotron jumbotronBack">
     <div class="container">
         <h1>Bienvenido a Semaforo</h1>
-        <p>Registra tu vehículo y adquiera se seguro ahora!</p>
+        <p>Registra tu vehículo y adquiere tu seguro ahora!</p>
         <p><a class="btn btn-primary btn-lg" href="#" role="button">Ver más</a></p>
     </div>
 </div>

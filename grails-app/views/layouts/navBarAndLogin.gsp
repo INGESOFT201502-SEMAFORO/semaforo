@@ -26,14 +26,14 @@
 <!-- NAVBAR
 ================================================== -->
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar- navbar-collapse collapse in" aria-expanded="true">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span style="background: #005599" class="icon-bar"></span>
+                    <span style="background: #005599" class="icon-bar"></span>
+                    <span style="background: #005599" class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="${createLink(uri: '/home')}">Proyecto Semáforo</a>
             </div>
@@ -60,8 +60,8 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> ${session.cliente.nombre} <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Perfil</a></li>
+                                <li><a href="#">Configuración</a></li>
                                 <li><g:link controller="cliente" action ="logout">Logout</g:link></li>
                             </ul>
                         </li>
@@ -74,7 +74,7 @@
                             <input type="text" placeholder="Email" class="form-control" name="correo">
                         </div>
                         <div class="form-group">
-                            <input type="password" placeholder="Password" class="form-control" name="password">
+                            <input type="password" placeholder="Contraseña" class="form-control" name="password">
                         </div>
                         <button type="submit" class="btn btn-success">Sign in</button>
                     </g:form>
