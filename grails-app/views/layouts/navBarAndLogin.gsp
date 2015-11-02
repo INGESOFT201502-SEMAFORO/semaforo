@@ -71,10 +71,10 @@
                 <g:else>
                     <g:form controller="cliente" action="login" class="navbar-form navbar-right">
                         <div class="form-group">
-                            <input type="text" placeholder="Email" class="form-control" name="correo">
+                            <input type="text" placeholder="Email" class="form-control form-fixer" name="correo">
                         </div>
                         <div class="form-group">
-                            <input type="password" placeholder="Contraseña" class="form-control" name="password">
+                            <input type="password" placeholder="Contraseña" class="form-control form-fixer" name="password">
                         </div>
                         <button type="submit" class="btn btn-success">Sign in</button>
                     </g:form>

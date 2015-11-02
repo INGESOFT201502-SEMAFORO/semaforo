@@ -26,3 +26,16 @@ body {
   margin-top: 3%;
   color:white;
 }
+
+input.form-fixer {
+  padding: 1px;
+  font-size: 12px;
+}
+
+.form-horizontal .form-group input,
+.form-horizontal .form-group select,
+.form-horizontal .form-group label
+{
+  height: 8px;
+  line-height: 8px;
+}
