@@ -8,7 +8,7 @@ class Cliente extends Usuario{
 	static hasMany = [citas:Cita, vehiculos: Vehiculo]
 
     static constraints = { 
-		tarjetaCredito maxSize: 50
+		tarjetaCredito nullable:false, blank:false, creditCard: true, unique: true
     }
 	
 	String toString() {

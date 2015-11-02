@@ -22,6 +22,6 @@ class Usuario {
 	}
 
 	String toString() {
-		return "Nombre: " + nombre +", Usuario: " + usuario +", Correo: " + correo +", Edad: " + edad +", Cedula: " + cedula
+		return "Nombre: " + nombre +", Usuario: " + usuario +", Correo: " + correo +",Password: "+ password +" , Edad: " + edad +", Cedula: " + cedula
 	}
 }

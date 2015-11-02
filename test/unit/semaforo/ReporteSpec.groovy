@@ -9,12 +9,12 @@ import spock.lang.Specification
 @TestFor(Reporte)
 class ReporteSpec extends Specification {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
-    void "test something"() {
+    void "fecha debe ser valida"() {
+        when :
+        def reporte = new Reporte(
+                fecha: new Date()
+        )
+        then:
+        reporte.validate()
     }
 }
