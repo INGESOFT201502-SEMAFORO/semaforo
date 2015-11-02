@@ -9,12 +9,13 @@ import spock.lang.Specification
 @TestFor(Operario)
 class OperarioSpec extends Specification {
 
-    def setup() {
-    }
+    void "Especialidad no puede ser vacia"() {
+        def operario = new Operario(
+                especialidad: "",
+                nombre: "David",
+                
 
-    def cleanup() {
-    }
+        )
 
-    void "test something"() {
     }
 }

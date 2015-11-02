@@ -56,4 +56,15 @@ class CitaSpec extends Specification {
         !cita.validate()
     }
 
+    void "la tarjeta de credito debe ser valida"() {
+        when :
+        def cita = new Cita(
+                fecha: new Date(),
+                lugar:"Centro Andino",
+                tarjetaCredito:"991604955303438"
+        )
+        then:
+        !cita.validate()
+    }
+
 }
