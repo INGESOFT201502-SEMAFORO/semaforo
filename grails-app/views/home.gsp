@@ -28,10 +28,10 @@
                 </div>
                 <br /><br>
                 <div class="rw-words rw-words-2">
-                    <span>a Semáforo</span>
+                    <span>a Semáforo...</span>
                     <span>ahora...</span>
-                    <span>tu Vehículo</span>
-                    <span>Nuestros Servicios</span>
+                    <span>tu Vehículo...</span>
+                    <span>Nuestros Servicios...</span>
                     <span>tu mejor opción!</span>
                 </div>
             </h2>
