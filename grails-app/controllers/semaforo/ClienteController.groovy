@@ -44,7 +44,7 @@ class ClienteController {
         }
 
         if (clienteInstance.hasErrors()) {
-            respond clienteInstance.errors, view:'create'
+            respond clienteInstance.errors, view:'register'
             return
         }
 
