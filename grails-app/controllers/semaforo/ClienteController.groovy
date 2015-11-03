@@ -30,6 +30,7 @@ class ClienteController {
         }else{
             flash.message = "inicio de sesion correcto ${cliente.correo}"
             session.cliente = cliente
+            session.rol = "clienteApp"
             redirect action: inicio
         }
 
@@ -50,6 +51,7 @@ class ClienteController {
         clienteInstance.save flush:true
 
         session.cliente = clienteInstance
+        session.rol = "clienteApp"
         //redirect (action: "show", id: clienteInstance.id)
         redirect action: inicio
     }
@@ -57,6 +59,7 @@ class ClienteController {
     def logout(){
         flash.message = "Cerrado de session correctamente ${session.cliente.nombre}"
         session.cliente = null
+        session.rol = null
         render view: "../home"
     }
 
