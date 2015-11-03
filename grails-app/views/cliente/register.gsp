@@ -30,15 +30,23 @@
         <a class="btn btn-default" href="${createLink(uri: '/home')}">Volver</a>
     </g:if>
     <g:else>
-        <h1>Formulario de registro</h1>
-        <g:form  url="[resource:clienteInstance, action:'registerLogin']" >
-            <fieldset class="form">
-                <g:render template="form"/>
-            </fieldset>
-            <fieldset class="buttons">
-                <g:submitButton name="create" class="btn btn-success" value="${message(code: 'default.button.create.label', default: 'Create')}" />
-            </fieldset>
-        </g:form>
+        <div class="container">
+            <div class="row col-md-6">
+                <h1>Formulario de registro</h1><br>
+                <g:form  url="[resource:clienteInstance, action:'registerLogin']" >
+                    <fieldset class="form">
+                        <g:render template="form"/>
+                    </fieldset>
+                    <fieldset class="buttons">
+                        <g:submitButton name="create" class="btn btn-success" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+                    </fieldset>
+                </g:form>
+            </div>
+
+
+        </div>
+
+
     </g:else>
 </div>
 </body>

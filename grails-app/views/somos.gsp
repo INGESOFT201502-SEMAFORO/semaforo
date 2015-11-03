@@ -43,6 +43,10 @@
         <div class="sp-parallax-bg"></div>
         <ul class="sp-slider clearfix">
             <li>
+                <h1>Qué nos define</h1><br>
+                <h2 align="justify"> </h2><br>
+            </li>
+            <li>
                 <h1>Misión</h1><br>
                 <h2 align="justify"> Semaforo tiene la misión de facilitar a los usuarios y asesores el registro y afiliacion de vehiculos a seguros automovilisticos, por medio de esta aplicación web al alcance de todos.</h2><br>
 
@@ -50,11 +54,6 @@
             <li>
                 <h1>Visión</h1><br>
                 <h2 align="justify"> Ser la plataforma líder ofreciendo el servicio de adquisición, afiliación y registro de seguros para automoviles en la ciudad de Bogotá D.C. </h2><br>
-            </li>
-            <li>
-                <h1>Alcance</h1><br>
-                <h2 align="justify"> Actualmente la aplicación será destinada a 500 usuarios, con el pasar del tiempo y el fortalecimiento de la aplicación, la demanda y las sociedades comerciales el alcance final sera
-                el Distrito Capìtal. </h2><br>
             </li>
             <li>
                 <h1>Nuestra Sede</h1><br>
