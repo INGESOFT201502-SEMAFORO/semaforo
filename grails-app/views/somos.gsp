@@ -10,61 +10,66 @@
 <html lang="en">
 <head>
     <meta name="layout" content="navBarAndLogin"/>
+    <asset:stylesheet src="tabmenu.css"/>
+    <asset:stylesheet src="mystyle1.css"/>
 
 </head>
 
 
 <body>
 
-<div class="sp-slideshow">
 
-    <input id="button-1" type="radio" name="radio-set" class="sp-selector-1" checked="checked" />
-    <label for="button-1" class="button-label-1"></label>
+<div class="container">
+    <section class="tabs">
+        <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
+        <label for="tab-1" class="tab-label-1">Nosotros</label>
 
-    <input id="button-2" type="radio" name="radio-set" class="sp-selector-2" />
-    <label for="button-2" class="button-label-2"></label>
+        <input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" />
+        <label for="tab-2" class="tab-label-2">Misión</label>
 
-    <input id="button-3" type="radio" name="radio-set" class="sp-selector-3" />
-    <label for="button-3" class="button-label-3"></label>
+        <input id="tab-3" type="radio" name="radio-set" class="tab-selector-3" />
+        <label for="tab-3" class="tab-label-3">Visión</label>
 
-    <input id="button-4" type="radio" name="radio-set" class="sp-selector-4" />
-    <label for="button-4" class="button-label-4"></label>
+        <input id="tab-4" type="radio" name="radio-set" class="tab-selector-4" />
+        <label align="left" for="tab-4" class="tab-label-4">Contactenos</label>
 
-    <input id="button-5" type="radio" name="radio-set" class="sp-selector-5" />
-    <label for="button-5" class="button-label-5"></label>
+        <div class="clear-shadow"></div>
 
-    <label for="button-1" class="sp-arrow sp-a1"></label>
-    <label for="button-2" class="sp-arrow sp-a2"></label>
-    <label for="button-3" class="sp-arrow sp-a3"></label>
-    <label for="button-4" class="sp-arrow sp-a4"></label>
-    <label for="button-5" class="sp-arrow sp-a5"></label>
+        <div class="content">
+            <div class="content-1">
+                <h2>¿Quienes Somos?</h2>
+                <p>Somos una organización el cual se encarga de facilitar el proceso que comprende el registro y afiliación
+                de vehículos al seguro que usted desee, ahorrando tiempo y evitando errores que se puedan presentar al hacerlo
+                de forma telefónica.</p><br>
+                <h2>¿Cómo trabajamos?</h2>
+                <p>Ofrecemos la plataforma para que el usuario desde la comodidad de su casa o trabajo pueda registrarse y a su vez
+                pueda registrar su vehículo, obteniendo una vista de los seguros disponibles dependiendo de las características
+                del vehículo del cual es propietario.  Una vez seleccionando la aseguradora con el cual se sienta más cómodo,
+                la aseguradora puede ingresar a la plataforma y revisar las solicitudes de afiliación por parte de los usuarios.</p><br>
+            </div>
+            <div class="content-2">
+                <h2>Misión</h2>
+                <p>Semáforo es una empresa que contribuye y facilita a los usuarios y aseguradoras la gestión en el proceso que
+                comprende el registro y afiliciación de vehículos, por medio de una aplicación web para garantizar que dicho proceso
+                sea exitoso y que cada parte pueda llevar seguimiento de las transacciones realizadas.</p>
+            </div>
+            <div class="content-3">
+                <h2>Visión</h2>
+                <p>Ser líderes en la gestión de procesos que comprenden la afiliación y registro de vehículos a seguros de automóviles
+                y motocicletas, ofreciendo así también la plataforma para que se puedan llevar a cabo transacciones de pago, llevando así
+                a cabo todas estas actividades desde cualquier lugar.</p>
+            </div>
+            <div class="content-4">
+                <h2>Sede Principal</h2>
+                <p><b>Dirección:</b> Carrera 39 # 25 - 87, Barrio El Recuerdo, Localidad de Teusaquillo, Bogotá D.C.</p><br>
+                <p><b>Teléfonos:</b> 3046285061, 3142134950.</p><br>
+            </div>
+        </div>
 
-    <div class="sp-content">
-        <div class="sp-parallax-bg"></div>
-        <ul class="sp-slider clearfix">
-            <li>
-                <h1>Qué nos define</h1><br>
-                <h2 align="justify"> </h2><br>
-            </li>
-            <li>
-                <h1>Misión</h1><br>
-                <h2 align="justify"> Semaforo tiene la misión de facilitar a los usuarios y asesores el registro y afiliacion de vehiculos a seguros automovilisticos, por medio de esta aplicación web al alcance de todos.</h2><br>
+    </section>
 
-            </li>
-            <li>
-                <h1>Visión</h1><br>
-                <h2 align="justify"> Ser la plataforma líder ofreciendo el servicio de adquisición, afiliación y registro de seguros para automoviles en la ciudad de Bogotá D.C. </h2><br>
-            </li>
-            <li>
-                <h1>Nuestra Sede</h1><br>
-                <h2 align="justify"> Sede Principal: Carrera 39 # 25 - 87, Oficina 19. </h2><br>
+</div>
 
-            </li>
-        </ul>
-    </div><!-- sp-content -->
-
-</div><!-- sp-slideshow -->
-<asset:stylesheet src="myslide.css"/>
 
 </body>
 </html>
