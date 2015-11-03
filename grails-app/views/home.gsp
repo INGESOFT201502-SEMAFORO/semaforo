@@ -21,9 +21,28 @@
 <g:else>
     <div class="jumbotron jumbotronBack">
         <div class="container">
-            <h1>Bienvenido a Semaforo</h1>
-            <p>Registra tu vehículo y adquiera se seguro ahora!</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Ver más</a></p>
+            <section class="rw-wrapper">
+                <h2 class="rw-sentence">
+
+                    <div class="rw-words rw-words-1">
+                        <span>Bienvenidos</span>
+                        <span>Regístrate </span>
+                        <span>Asegura </span>
+                        <span>Pregunta por</span>
+                        <span>Semáforo...</span>
+                    </div>
+                    <br /><br>
+                    <div class="rw-words rw-words-2">
+                        <span>a Semáforo...</span>
+                        <span>ahora...</span>
+                        <span>tu Vehículo...</span>
+                        <span>Nuestros Servicios...</span>
+                        <span>tu mejor opción!</span>
+                    </div>
+                </h2>
+            </section>
+            <br><br><br>
+            <p><a class="btn btn-primary btn-lg pull-right" href="#" role="button">Ver más</a></p>
         </div>
     </div>
 
@@ -49,9 +68,9 @@
         </div>
 
         <hr>
-
     </div> <!-- /container -->
 </g:else>
 
+<asset:stylesheet src="variacion.css"/>
 
 </body></html>

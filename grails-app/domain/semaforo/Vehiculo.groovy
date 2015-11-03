@@ -12,8 +12,8 @@ class Vehiculo {
 
     static constraints = {
 		seguro nullable: true
-		placa unique: true, blank: false, nullable: false
-		modelo blank: false, nullable: false //falta validar que sea una fecha anterior o igual a la actual
+		placa unique: true, blank: false, nullable: false, matches: /[A-Z]{3}-\d{3}/
+		modelo blank: false, nullable: false
 		color blank: false, nullable: false
 		marca blank: false, nullable: false
     }
