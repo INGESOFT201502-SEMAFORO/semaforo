@@ -1,0 +1,19 @@
+#mostrar2 h3, h4{
+    text-align: center;
+}
+
+#mostrar2 .container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+#mostrar2 article{
+    margin: 15px;
+}
+
+#mostrar2 img{
+    width: 100%;
+    max-width: 280px;
+}
