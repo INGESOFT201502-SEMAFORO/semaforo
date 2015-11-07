@@ -51,38 +51,7 @@
 </header>
 
 <main>
-  <section id="banner">
-    <img src="http://7-themes.com/data_images/out/21/6839236-traffic-light.jpg">
-    <div class="container">
-      <h2>Semáforo, regístrate y afilia tu vehículo!</h2>
-      <p>¿Cual es el mejor seguro para tu vehículo?</p>
-      <a href="#">Leer más</a>
-    </div>
-  </section>
-  <section id="mostrar">
-    <h2>Consulta todos nuestros servicios</h2>
-    <p> Semáforo se encarga de hacer tu registro y aficiliación de vehículo mucho más facil y rápido, tan sólo tienes que seguir los siguientes pasos:</p>
 
-  </section>
-  <section id="mostrar2">
-    <h3>Para tener en cuenta...</h3>
-    <div class="container">
-      <article>
-        <img src="http://www.diariodeseguros.es/wp-content/uploads/2012/01/un-37-de-os-conductores-ha-cambiado-su-seguro-de-coche-por-otro-m%C3%A1s-barato.jpg">
-        <h4>a quien llamar</h4>
-      </article>
-      <article>
-        <img src="http://1.bp.blogspot.com/-at4jSzx3s6w/VME2RUi9TaI/AAAAAAAAA_w/8lb8ePe0wBY/s1600/about-us.jpg">
-        <h4>Por qué asegurar el vehículo</h4>
-      </article>
-      <article>
-        <img src="http://www.finanzasdigital.com/wp-content/uploads/2014/06/taller-mecanico.jpg">
-        <h4>cada cuanto llevar el carro al mecánico?</h4>
-      </article>
-
-    </div>
-
-  </section>
 
 </main>
 

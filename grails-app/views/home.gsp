@@ -34,7 +34,7 @@
 
         <nav class="menu">
             <a href="${createLink(uri: '/home')}">Inicio</a>
-            <a href="">¿Quienes Somos?</a>
+            <a href="${createLink(uri: '/whoWeAre')}">¿Quienes Somos?</a>
             <a ref=#>Equipo</a>
             <g:if test="${session.cliente}" >
                 <li><a href="#">${session.cliente.nombre}</a>

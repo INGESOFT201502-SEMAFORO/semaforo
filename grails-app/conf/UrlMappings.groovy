@@ -11,6 +11,7 @@ class UrlMappings {
         "/home"(view: "/home")
         "/equipo"(view: "/equipo")
         "/ingresar"(view: "/ingresar")
+        "/whoWeAre"(view: "/whoWeAre")
         "500"(view:'/error')
 	}
 }
