@@ -1,14 +1,76 @@
 package semaforo
 
-
+import groovy.sql.Sql
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+import grails.converters.JSON
 
 @Transactional(readOnly = true)
 class VehiculoController {
+    def dataSource
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE", saveApp: "POST", updateApp: "PUT"]
+
+    
+    def getTipoVehiculo(){
+        def query = "select distinct(tipo_vehiculo) as tipo from guia order by tipo asc"
+        def sql = Sql.newInstance(dataSource)
+        def datos = []
+        sql.eachRow(query){ row ->
+            datos.add(row.tipo)
+        }
+        sql.close()
+        render datos as JSON
+    }
+
+    def getMarcas(){
+        def query = "select distinct(marca) as marca from guia where tipo_vehiculo='"+ params.tipo +"' order by marca asc"
+        def sql = Sql.newInstance(dataSource)
+        def datos = []
+        sql.eachRow(query){ row ->
+            datos.add(row.marca)
+        }
+        sql.close()
+        render datos as JSON
+    }
+
+    def getReferencia1(){
+        def query = "select distinct(referencia1) as referencia1 from guia where marca='${params.marca}' order by referencia1 asc"
+        def sql = Sql.newInstance(dataSource)
+        def datos = []
+        sql.eachRow(query){ row ->
+            datos.add(row.referencia1)
+        }
+        sql.close()
+        render datos as JSON
+    }
+
+    def getReferencia2(){
+        def query = "select distinct(referencia2) as referencia2 from guia where marca='${params.marca}' and referencia1='${params.referencia1}' order by referencia2 asc"
+        def sql = Sql.newInstance(dataSource)
+        def datos = []
+        sql.eachRow(query){ row ->
+            datos.add(row.referencia2)
+        }
+        sql.close()
+        render datos as JSON
+    }
+
+    def getReferencia3(){
+        def query = "select id,codigo,referencia3 from guia where marca='${params.marca}' and referencia1='${params.referencia1}' and referencia2='${params.referencia2}' order by referencia3 asc"
+        def sql = Sql.newInstance(dataSource)
+        def datos = []
+        sql.eachRow(query){ row ->
+            datos.add([id : row.id, codigo: row.codigo, referencia3 : row.referencia3])
+        }
+        sql.close()
+        render datos as JSON
+    }
+
+    def createRequest(){
+
+    }
 
     def indexApp(Integer max) {
         params.max = Math.min(max ?: 10, 100)
