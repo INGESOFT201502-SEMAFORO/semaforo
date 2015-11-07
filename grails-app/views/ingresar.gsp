@@ -29,7 +29,7 @@
 
         <nav class="menu">
             <a href="${createLink(uri: '/home')}">Inicio</a>
-            <a href="">¿Quienes Somos?</a>
+            <a href="${createLink(uri: '/whoWeAre')}">¿Quienes Somos?</a>
             <a href="${createLink(uri: '/equipo')}">Equipo</a>
             <g:if test="${session.cliente}" >
                 <li><a href="#">${session.cliente.nombre}</a>
@@ -63,7 +63,7 @@
     </p>
 
     <p>
-        <input type="submit" name="submit" value="Continue">
+        <input type="submit" name="submit" value="Iniciar Sesión">
     </p><br>
 
     <a href="${createLink(uri: '/home')}">Volver</a>
