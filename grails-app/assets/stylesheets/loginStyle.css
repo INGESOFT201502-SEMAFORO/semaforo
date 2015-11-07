@@ -1,5 +1,11 @@
 body{
-    background: url("../images/mybg.jpg");
+    background: url("../images/bg3.jpg");
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
 
 }
 
@@ -18,7 +24,7 @@ body{
 }
 
 .form-4 h6 {
-    color: #747474;
+    color: #fff;
     text-align: center;
     font-size: 22px;
     padding-bottom: 20px;
