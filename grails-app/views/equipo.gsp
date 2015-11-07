@@ -11,9 +11,11 @@
 <head>
   <title>Semáforo - Equipo</title>
   <meta charset="UTF-8">
+  <link rel="icon" href="http://unal.edu.co/fileadmin/templates/favicon.ico">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
   <asset:stylesheet src="fontello.css"/>
   <asset:stylesheet src="estilos.css"/>
+
 </head>
 
 
@@ -21,17 +23,30 @@
 
 <header>
   <div class="container">
+
     <h1 class="icon-semaforo">Semáforo</h1>
     <input type="checkbox" id="menu-bar">
     <label class="icon-menu" for="menu-bar"></label>
-    <ul>
+
     <nav class="menu">
       <a href="${createLink(uri: '/home')}">Inicio</a>
-      <a ref="">¿Quienes Somos?</a>
-      <a ref="">Equipo</a>
-      <a href="${createLink(uri: '/ingresar')}">Login</a>
+      <a href="">¿Quienes Somos?</a>
+      <a ref=#>Equipo</a>
+      <g:if test="${session.cliente}" >
+        <li><a href="#">${session.cliente.nombre}</a>
+          <ul>
+            <li><a href="">Mi perfil</a></li>
+            <li><a href="">Configuración</a></li>
+            <li><g:link controller="cliente" action ="logout">Salir</g:link></li>
+          </ul>
+        </li>
+      </g:if>
+
+      <g:else>
+        <a href="${createLink(uri: '/ingresar')}">Login</a>
+      </g:else>
     </nav>
-      </ul>
+
   </div>
 </header>
 
@@ -45,8 +60,9 @@
     </div>
   </section>
   <section id="mostrar">
-    <h2>Revisa todos nuestros servicios</h2>
-    <p> texto que debe decir algo acerca de seguros, servicios... para que el usuario revise</p>
+    <h2>Consulta todos nuestros servicios</h2>
+    <p> Semáforo se encarga de hacer tu registro y aficiliación de vehículo mucho más facil y rápido, tan sólo tienes que seguir los siguientes pasos:</p>
+
   </section>
   <section id="mostrar2">
     <h3>Para tener en cuenta...</h3>
