@@ -15,6 +15,10 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <asset:stylesheet src="fontello.css"/>
     <asset:stylesheet src="estilos.css"/>
+    <asset:stylesheet src="sliderSection.css"/>
+    <asset:javascript src="jquery.min.js"/>
+    <asset:javascript src="main.js"/>
+
 
 </head>
 
@@ -61,11 +65,65 @@
     </section>
     <section id="mostrar">
         <h2>Consulta todos nuestros servicios</h2>
-        <p> Semáforo se encarga de hacer tu registro y aficiliación de vehículo mucho más facil y rápido, tan sólo tienes que seguir los siguientes pasos:</p>
+        <p> Semáforo se encarga de hacer tu registro y aficiliación de vehículo
+        mucho más facil y rápido...</p>
+        <p>Puedes revisar el estado de tu vehículo en el taller, costos, notificaciones cuando tu vehículo esté listo!</p>
+        <p>Mira la lista de precios de seguros y selecciona la que desees... ¡Desde cualquier lugar!</p>
+    </section>
+
+    <section class="slider-container">
+        <ul id="slider" class="slider-wrapper">
+            <li class="slide-current">
+                <img src="http://i.kinja-img.com/gawker-media/image/upload/s--ygwZpFG---/c_scale,fl_progressive,q_80,w_800/18hrscdj42rlojpg.jpg" alt="Slider Imagen 1">
+                <div class="caption">
+                    <h3 class="caption-title">Inicia sesión o regístrate!</h3>
+                    <p>Dando clic en Login puedes iniciar sesión, en caso de que no tengas cuenta, adquiere una fácil y rápido
+                        registrándote</p>
+                </div>
+            </li>
+
+            <li>
+                <img src="http://resizer.es/photos/003.jpg" alt="Slider Imagen 1">
+                <div class="caption">
+                    <h3 class="caption-title">Registra y asegura tu vehículo!</h3>
+                    <p>Una vez entrando en tu cuenta, puedes añadir los vehículos que posees.
+                       Asegúralos en tu entidad recomendada o preferida!</p>
+                </div>
+            </li>
+
+            <li>
+                <img src="http://resizer.es/photos/revisiont.jpg" alt="Slider Imagen 1">
+                <div class="caption">
+                    <h3 class="caption-title">Revisa el estado de tu vehículo en el taller!</h3>
+                    <p>Puedes ver el estado de tu vehículo en el taller y recibir notificación cuando esté listo!</p>
+                </div>
+            </li>
+
+            <li>
+                <img src="http://resizer.es/photos/peritajeVV.jpg" alt="Slider Imagen 1">
+                <div class="caption">
+                    <h3 class="caption-title">Peritaje de Vehículos</h3>
+                    <p>Solicita tu cita para avaluar tu vehículo</p>
+                </div>
+            </li>
+        </ul>
+
+        <!-- Sombras -->
+        <div class="shadow"></div>
+
+        <!-- Controles -->
+        <ul id="slider-controls" class="slider-controls"></ul>
 
     </section>
+
+
+
+
+
+
     <section id="mostrar2">
-        <h3>Para tener en cuenta...</h3>
+        <br>
+        <h3>Artículos que te pueden interesar!</h3>
         <div class="container">
             <article>
                 <img src="http://www.diariodeseguros.es/wp-content/uploads/2012/01/un-37-de-os-conductores-ha-cambiado-su-seguro-de-coche-por-otro-m%C3%A1s-barato.jpg">
