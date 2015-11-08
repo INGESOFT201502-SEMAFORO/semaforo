@@ -1,0 +1,24 @@
+.main {
+    background:#f2f2f2;
+}
+
+.color1 {
+    text-align: justify;
+    background: #DCDCDC;
+
+}
+
+.color2 {
+    text-align: justify;
+    background: #ACC1F1;
+}
+
+aside {
+    text-align: justify;
+    background:#c0392b;
+    color:#fff;
+}
+
+footer {
+    background:#DEB887;
+}

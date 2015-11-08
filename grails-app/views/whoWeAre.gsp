@@ -10,18 +10,21 @@
 <!-- saved from url=(0043)http://getbootstrap.com/examples/carousel/# -->
 <html lang="en">
 <head>
-    <title>Semáforo - Inicio</title>
+    <title>Semáforo - Quienes Somos?</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta charset="UTF-8">
     <link rel="icon" href="http://unal.edu.co/fileadmin/templates/favicon.ico">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
-    <asset:stylesheet src="fontello.css"/>
-    <asset:stylesheet src="estilosWWA.css"/>
-    <asset:javascript src="modernizr.custom.86080.js"/>
-    <asset:stylesheet src="sBG.css"/>
-    <asset:stylesheet src="slideBG.css"/>
+    <asset:stylesheet src="bootstrap.min.css"/>
     <asset:javascript src="jquery.min.js"/>
-
+    <asset:javascript src="main.js"/>
+    <asset:stylesheet src="sliderSection.css"/>
+    <asset:stylesheet src="demo.css"/>
+    <asset:stylesheet src="common.css"/>
+    <asset:stylesheet src="style2.css"/>
+    <asset:stylesheet src="fontello.css"/>
+    <asset:stylesheet src="estilos.css"/>
+    <asset:stylesheet src="columnas.css"/>
 </head>
 
 

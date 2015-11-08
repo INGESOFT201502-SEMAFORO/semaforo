@@ -12,6 +12,7 @@
     <title>Semáforo - Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <asset:stylesheet src="bootstrap.min.css"/>
     <asset:stylesheet src="loginStyle.css"/>
     <asset:stylesheet src="estilos.css"/>
     <asset:stylesheet src="fontello.css"/>
