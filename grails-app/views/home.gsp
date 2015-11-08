@@ -14,10 +14,9 @@
     <meta charset="UTF-8">
     <link rel="icon" href="http://unal.edu.co/fileadmin/templates/favicon.ico">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <asset:stylesheet src="bootstrap.min.css"/>
-    <asset:javascript src="jquery.min.js"/>
-    <asset:javascript src="main.js"/>
-    <asset:stylesheet src="sliderSection.css"/>
     <asset:stylesheet src="demo.css"/>
     <asset:stylesheet src="common.css"/>
     <asset:stylesheet src="style2.css"/>
@@ -134,75 +133,68 @@
         <div class="row">
             <div class="color1 col-xs-12 col-sm-6 col-md-3">
                 <h4 class="icon-tool">Servicios</h4>
-                <p>Registra y afilia tus vehículos
-                al seguro que más se acomode a tu vehículo.<br><br>
-                Revisa el estado de tu vehículo en el taller.<br><br>
-                Pide tu cita para peritaje.</p>
+                <p>Registra y afilia tus vehículos... Revisa su estado en el taller...</p>
             </div>
             <div class="color2 col-xs-12 col-sm-6 col-md-3">
                 <h4 class="icon-us">Acerca de Nosotros</h4>
-                <p>Puedes ingresar a nuestra sección "¿Quienes Somos?" del menú principal, donde definimos nuestra Misión y Visión, nuestro mode de trabajo y más información...
-                <br><br><br></p>
+                <p>Revisa nuestra sección "¿Quienes somos?" en el menú principal... </p>
             </div>
-
+            <div class="clearfix visible-sm-block"></div>
             <div class="color1 col-xs-12 col-sm-6 col-md-3">
                 <h4 class="icon-reg">Registro</h4>
-                <p>Estando registrado obtienes acceso a todos nuestros beneficios.<br><br>
-                Ofrece tus servicios de seguro y taller!<br><br><br></p>
+                <p>Estando registrado obtienes acceso a nuestros beneficios...</p>
             </div>
 
             <div class="color2 col-xs-12 col-sm-6 col-md-3">
                 <h4 class="icon-team">Equipo</h4>
-                <p>Integrantes del equipo que llevaron a cabo el desarrollo de este proyecto...
-                <br><br><br><br><br><br></p>
+                <p>Revisa nuestra sección "Equipo" en la barra del menú principal...</p>
             </div>
         </div>
     </div>
     </section>
     <br><br>
-    <section class="slider-container"><!-- SLIDER  -->
-        <ul id="slider" class="slider-wrapper">
-            <li class="slide-current">
-                <img src="http://i.kinja-img.com/gawker-media/image/upload/s--ygwZpFG---/c_scale,fl_progressive,q_80,w_800/18hrscdj42rlojpg.jpg" alt="Slider Imagen 1">
-                <div class="caption">
-                    <h3 class="caption-title">Inicia sesión o regístrate!</h3>
-                    <p>Dando clic en Login puedes iniciar sesión, en caso de que no tengas cuenta, adquiere una fácil y rápido
-                        registrándote</p>
+
+
+<div class="container-fluid">
+    <br>
+    <div class="col-md-12">
+        <div id="carousel-1" class="carousel slide" data-ride="carousel">
+            <!-- indicadores -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-1" data-slide-to="1"></li>
+                <li data-target="#carousel-1" data-slide-to="2"></li>
+            </ol>
+            <!-- Contenedor slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="https://www.soti.net/media/5765/mobicontrol_banner.jpg" class="img-responsive" alt="">
+                    <div class="carousel-caption">
+                        <h3>Contáctenos:</h3>
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                        <p>Dirección: Cra 39# 25-87, Bogotá D.C.</p>
+                        <p>Teléfonos: 304 628 50 61</p>
+                    </div>
                 </div>
-            </li>
-
-            <li>
-                <img src="http://resizer.es/photos/003.jpg" alt="Slider Imagen 1">
-                <div class="caption">
-                    <h3 class="caption-title">Registra y asegura tu vehículo!</h3>
-                    <p>Una vez entrando en tu cuenta, puedes añadir los vehículos que posees.
-                       Asegúralos en tu entidad recomendada o preferida!</p>
+                <div class="item">
+                    <img src="http://www.sapiseguridad.com/wp-content/uploads/2013/04/Layer_slider_bg1.jpg" class="img-responsive" alt="">
+                    <div class="carousel-caption">
+                        <h3>Este es nuestro slide1</h3>
+                        <p>bla bla bla</p>
+                    </div>
                 </div>
-            </li>
-
-            <li>
-                <img src="http://resizer.es/photos/revisiont.jpg" alt="Slider Imagen 1">
-                <div class="caption">
-                    <h3 class="caption-title">Revisa el estado de tu vehículo en el taller!</h3>
-                    <p>Puedes ver el estado de tu vehículo en el taller y recibir notificación cuando esté listo!</p>
+                <div class="item">
+                    <img src="http://www.digital-direction.com/images/default-source/page-banner-images/winding-road-sign-bw.jpg?sfvrsn=2" alt="">
+                    <div class="carousel-caption">
+                        <h3>Este es nuestro slide1</h3>
+                        <p>bla bla bla</p>
+                    </div>
                 </div>
-            </li>
-
-            <li>
-                <img src="http://resizer.es/photos/peritajeVV.jpg" alt="Slider Imagen 1">
-                <div class="caption">
-                    <h3 class="caption-title">Peritaje de Vehículos</h3>
-                    <p>Solicita tu cita para avaluar tu vehículo</p>
-                </div>
-            </li>
-        </ul>
-
-        <!-- Sombras -->
-        <div class="shadow"></div>
-
-        <!-- Controles -->
-        <ul id="slider-controls" class="slider-controls"></ul>
-    </section>
+            </div>
+            <!--controles-->
+        </div>
+    </div>
+</div>
 
 <footer>
     <div class="container">
