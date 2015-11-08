@@ -49,18 +49,18 @@
 
     </div>
 </header>
-
+<br><br><br><br><br><br>
 <g:form controller="cliente" action="login" class="form-4">
-    <br><br><br><br><br><br>
+
     <h6>Ingresar</h6>
 
     <p>
-        <label for="login">Usuario o Email</label>
-        <input type="text" name="login" placeholder="Usuario o Email" required>
+
+        <input type="text" name="correo" placeholder="Usuario o Email" required>
     </p>
     <p>
-        <label for="password">Contraseña</label>
-        <input type="password" name='Contraseña' placeholder="Contraseña" required>
+
+        <input type="password" name='password' placeholder="Contraseña" required>
     </p>
 
     <p>

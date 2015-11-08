@@ -19,6 +19,8 @@ aside {
     color:#fff;
 }
 
-footer {
-    background:#DEB887;
+footer{
+    width: 100%;
+    background:#333;
+    color: white;
 }

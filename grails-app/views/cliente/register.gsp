@@ -28,7 +28,7 @@
         <nav class="menu">
             <a href="${createLink(uri: '/home')}">Inicio</a>
             <a href="${createLink(uri: '/whoWeAre')}">¿Quienes Somos?</a>
-            <a ref=#>Equipo</a>
+            <a href="${createLink(uri: '/equipo')}">Equipo</a>
             <g:if test="${session.cliente}" >
                 <li><a href="#">${session.cliente.nombre}</a>
                     <ul>
@@ -67,23 +67,15 @@
     </g:if>
     <g:else>
         <div class="container">
-            <div class="row col-lg-6">
-                <br><br><br><br>
-                <h6>Formulario Creación cuenta de usuario</h6><br>
-                <g:form  url="[resource:clienteInstance, action:'registerLogin']" >
-                    <fieldset class="form">
-                        <g:render template="form"/>
-                    </fieldset>
-                    <p>
-                        <input type="submit" name="submit" value="Iniciar Sesión">
-                    </p><br>
+                <br><br><br><br><br><br>
+                <h3 class="form-4">Formulario Creación cuenta de usuario</h3>
+                <g:form  url="[resource:clienteInstance, action:'registerLogin']" class="form-4">
 
-                    <g:submitButton name="create"  value="${message(code: 'default.button.create.label', default: 'Create')}" />
+                    <g:render template="form"/>
+                    <br>
+                    <g:submitButton class="form-4" id="regButton" name="create"  value="${message(code: 'default.button.create.label', default: 'Create')}" />
 
                 </g:form>
-            </div>
-
-
         </div>
 
 

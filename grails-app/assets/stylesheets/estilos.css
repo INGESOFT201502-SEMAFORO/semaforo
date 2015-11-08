@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 @import url(menubar.css);
 @import url(mainbanner.css);
-@import url(mainPart2.css);
+
 
 
 *{
@@ -50,6 +50,28 @@ section{
     text-align: center;
 }
 
+#mostrar1 h2{
+    text-align: center;
+}
+
+#mostrar1 p{
+    text-align: justify;
+    font-style: italic;
+}
+
+#mostrar1 a{
+    font-weight: bold;
+    display: block;
+    width: 150px;
+    color: #333;
+    text-decoration: none;
+    padding: 7px;
+    margin-top: 10px;
+    border: 1px solid #333;
+}
+
+
+
 
 footer .container{
     display: flex;
@@ -69,7 +91,7 @@ footer .container{
 }
 
 .sociales a{
-    color: #333;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -77,4 +99,18 @@ footer .container{
     .container{
         width: 1000px;
     }
+}
+
+#mycarousel a{
+    width: 120px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+}
+
+#mycarousel2 a{
+    width: 120px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
 }

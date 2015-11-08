@@ -6,6 +6,8 @@ body{
     -o-background-size:cover;
     background-size:cover;
     background-position:center;
+    background-attachment: fixed;
+
 
 }
 
@@ -13,7 +15,7 @@ body{
 .form-4 {
     /* Size and position */
     width: 300px;
-    margin: 60px auto 30px;
+    margin: 0px auto 30px;
     padding: 10px;
     position: relative;
 
@@ -135,8 +137,13 @@ body{
     background: #594642;
 }
 
+.container h1{
+    text-align: center;
+    color: white;
+}
+
 .form-4 label {
-    display: none;
+
     padding: 0 0 5px 2px;
     cursor: pointer;
 }
@@ -149,6 +156,9 @@ body{
     display: block;
 }
 
+.container h3{
+    text-align: center;
+}
 
 .form-4 a {
     /* Size and position */

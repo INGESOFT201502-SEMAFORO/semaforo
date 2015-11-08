@@ -37,7 +37,7 @@
         <nav class="menu">
             <a href="${createLink(uri: '/home')}">Inicio</a>
             <a href="${createLink(uri: '/whoWeAre')}">¿Quienes Somos?</a>
-            <a ref=#>Equipo</a>
+            <a ref="${createLink(uri: '/equipo')}">Equipo</a>
             <g:if test="${session.cliente}" >
                 <li><a href="#">${session.cliente.nombre}</a>
                     <ul>
@@ -178,16 +178,18 @@
                 </div>
                 <div class="item">
                     <img src="http://www.sapiseguridad.com/wp-content/uploads/2013/04/Layer_slider_bg1.jpg" class="img-responsive" alt="">
-                    <div class="carousel-caption">
-                        <h3>Este es nuestro slide1</h3>
-                        <p>bla bla bla</p>
+                    <div class="carousel-caption" id="mycarousel">
+                        <h3>Regístrate y Cotiza por tu seguro!</h3>
+                        <p>Una vez registrado y añadiendo tus vehículos, podrás cotizar tus seguros...</p>
+                        <p><g:link controller="cliente" action ="register">Regístrate</g:link></p>
                     </div>
                 </div>
                 <div class="item">
                     <img src="http://www.digital-direction.com/images/default-source/page-banner-images/winding-road-sign-bw.jpg?sfvrsn=2" alt="">
-                    <div class="carousel-caption">
-                        <h3>Este es nuestro slide1</h3>
-                        <p>bla bla bla</p>
+                    <div class="carousel-caption" id="mycarousel2">
+                        <h3>Regístrate y Muestra tu portafolio!</h3>
+                        <p>Una vez registrado y añadiendo tus vehículos, podrás cotizar tus seguros...</p>
+                        <p><a href="#">Resgístrate</a></p>
                     </div>
                 </div>
             </div>
@@ -195,15 +197,25 @@
         </div>
     </div>
 </div>
+<div class="container">
+    <section id="mostrar1">
+        <h2>¿No tienes Vehículo aún?...</h2>
+        <p>Puedes consultar la página "tucarro.com"...  Cotiza y compra tu vehículo para que lo puedas registrar y así
+            puedas disfrutar de nuestros servicios...</p>
+        <a href="http://www.tucarro.com.co/" target="_blank">Quiero mi Vehículo!!</a>
+    </section>
+</div>
+
 
 <footer>
     <div class="container">
-        <p class="copy">Semáforo &copy; 2015</p>
+
         <div class="sociales">
             <a class="icon-fb" href="#"></a>
             <a class="icon-twitter" href="#"></a>
             <a class="icon-gp" href="#"></a>
         </div>
+        <p class="copy">Semáforo &copy; 2015</p>
     </div>
 </footer>
 
