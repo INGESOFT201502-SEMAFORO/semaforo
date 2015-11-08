@@ -28,7 +28,11 @@
 
 
 <body>
+
+
+
 <header>
+
     <div class="container">
         <h1 class="icon-semaforo">Semáforo</h1><!-- BARRA DE MENU (CONSOLIDADA) -->
         <input type="checkbox" id="menu-bar">
@@ -195,8 +199,9 @@
             </div>
             <!--controles-->
         </div>
-    </div>
-</div>
+        </div>
+
+
 <div class="container">
     <section id="mostrar1">
         <h2>¿No tienes Vehículo aún?...</h2>
@@ -205,6 +210,7 @@
         <a href="http://www.tucarro.com.co/" target="_blank">Quiero mi Vehículo!!</a>
     </section>
 </div>
+
 
 
 <footer>
@@ -218,6 +224,12 @@
         <p class="copy">Semáforo &copy; 2015</p>
     </div>
 </footer>
+
+
+<!-- /container -->
+
+
+
 
 </body>
 </html>

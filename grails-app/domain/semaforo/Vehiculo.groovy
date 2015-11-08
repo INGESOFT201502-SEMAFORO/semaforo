@@ -9,7 +9,7 @@ class Vehiculo {
 
 	static belongsTo = [cliente: Cliente]
 	static hasOne = [seguro: Seguro]
-	
+
     static constraints = {
 		seguro nullable: true
 		placa unique: true, blank: false, nullable: false, matches: /[A-Z]{3}-\d{3}/
