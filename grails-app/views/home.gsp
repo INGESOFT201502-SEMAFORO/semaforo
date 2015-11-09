@@ -68,42 +68,53 @@
         <a href="#">Leer más</a>
     </div>
 </section>
-<section id="mostrar">
-    <h2>¿No tienes cuenta en Semáforo?...</h2>
-    <p> Regístrate fácil y rápido!</p>
-</section>
-<div class="container">
 
-    <section>
 
-        <ul class="ch-grid">
-            <li>
-                <div class="ch-item ch-img-1">
-                    <div class="ch-info">
-                        <h3>Cliente</h3>
-                        <p>Obtén beneficios para tí y tu vehículo!<g:link controller="cliente" action ="register">Regístrate</g:link></p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="ch-item ch-img-2">
-                    <div class="ch-info">
-                        <h3>Vendedor</h3>
-                        <p>Crea tu cuenta y ofrece tus servicios!<a href="http://drbl.in/eNXW">Regístrate</a></p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="ch-item ch-img-3">
-                    <div class="ch-info">
-                        <h3>Taller</h3>
-                        <p>Haz crecer tu negocio con más clientes!<a href="http://drbl.in/eNXY">Regístrate</a></p>
-                    </div>
-                </div>
-            </li>
-        </ul>
+<g:if test="${session.rol == "clienteApp"}">
+
+
+</g:if>
+<g:else>
+
+    <section id="mostrar">
+        <h2>¿No tienes cuenta en Semáforo?...</h2>
+        <p> Regístrate fácil y rápido!</p>
     </section>
-</div>
+
+    <div class="container">
+
+        <section>
+
+            <ul class="ch-grid">
+                <li>
+                    <div class="ch-item ch-img-1">
+                        <div class="ch-info">
+                            <h3>Cliente</h3>
+                            <p>Obtén beneficios para tí y tu vehículo!<g:link controller="cliente" action ="register">Regístrate</g:link></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ch-item ch-img-2">
+                        <div class="ch-info">
+                            <h3>Vendedor</h3>
+                            <p>Crea tu cuenta y ofrece tus servicios!<a href="http://drbl.in/eNXW">Regístrate</a></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ch-item ch-img-3">
+                        <div class="ch-info">
+                            <h3>Taller</h3>
+                            <p>Haz crecer tu negocio con más clientes!<a href="http://drbl.in/eNXY">Regístrate</a></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+</g:else>
+
 
     <div class="container">
         <div class="main row">
