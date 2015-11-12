@@ -12,10 +12,21 @@
     <title>Semáforo - Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
     <asset:stylesheet src="bootstrap.min.css"/>
-    <asset:stylesheet src="loginStyle.css"/>
-    <asset:stylesheet src="estilos.css"/>
+    <asset:stylesheet src="demo.css"/>
+    <asset:stylesheet src="common.css"/>
+    <asset:stylesheet src="style2.css"/>
     <asset:stylesheet src="fontello.css"/>
+    <asset:stylesheet src="estilos.css"/>
+    <asset:stylesheet src="columnas.css"/>
+    <asset:stylesheet src="responsiveslides.css"/>
+    <asset:javascript src="responsiveslides.js"/>
+    <asset:stylesheet src="animate.css"/>
+    <asset:javascript src="wow.min.js"/>
+    <asset:stylesheet src="default.css"/>
+    <asset:stylesheet src="font-awesome.min.css"/>
+    <asset:stylesheet src="loginStyle.css"/>
 
 </head>
 
@@ -55,7 +66,6 @@
     <h6>Ingresar</h6>
 
     <p>
-
         <input type="text" name="correo" placeholder="Usuario o Email" required>
     </p>
     <p>
@@ -70,17 +80,17 @@
     <a href="${createLink(uri: '/home')}">Volver</a>
 </g:form>
 
-<footer>
+
     <br><br><br><br>
-    <div class="container">
-        <p class="copy">Semáforo &copy; 2015</p>
+    <div class="container" id="foot">
+        <h6 class="copy">Semáforo &copy; 2015</h6>
         <div class="sociales">
             <a class="icon-fb" href="#"></a>
             <a class="icon-twitter" href="#"></a>
             <a class="icon-gp" href="#"></a>
         </div>
     </div>
-</footer>
+
 
 </body>
 </html>

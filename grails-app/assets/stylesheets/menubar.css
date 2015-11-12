@@ -30,7 +30,8 @@ header label{
 }
 
 .menu a:hover{
-    background: rgba(255,255,255,0.3);
+
+    box-shadow: 0 84px 0 rgba(255,255,255,0.3) inset;
 }
 
 #menu-bar:checked ~ .menu{

@@ -15,6 +15,7 @@
     <asset:stylesheet src="bootstrap.min.css"/>
     <asset:stylesheet src="estilos.css"/>
     <asset:stylesheet src="loginStyle.css"/>
+    <asset:stylesheet src="fontello.css"/>
     <g:set var="entityName" value="${message(code: 'cliente.label', default: 'Cliente')}" />
     <title><g:message code="default.create.label" args="[entityName]" /></title>
 </head>
@@ -63,23 +64,36 @@
                 </g:eachError>
             </ul>
         </g:hasErrors>
-        <a class="btn btn-default" href="${createLink(uri: '/home')}">Volver</a>
+
     </g:if>
     <g:else>
+        <br><br><br><br><br><br>
         <div class="container">
-                <br><br><br><br><br><br>
+
                 <h3 class="form-4">Formulario Creación cuenta de usuario</h3>
                 <g:form  url="[resource:clienteInstance, action:'registerLogin']" class="form-4">
 
                     <g:render template="form"/>
                     <br>
                     <g:submitButton class="form-4" id="regButton" name="create"  value="${message(code: 'default.button.create.label', default: 'Create')}" />
-
+                    <a class="btn btn-default" href="${createLink(uri: '/home')}">Volver</a>
                 </g:form>
         </div>
 
 
     </g:else>
 </div>
+
+<footer>
+    <br><br><br><br>
+    <div class="container">
+        <p class="copy">Semáforo &copy; 2015</p>
+        <div class="sociales">
+            <a class="icon-fb" href="#"></a>
+            <a class="icon-twitter" href="#"></a>
+            <a class="icon-gp" href="#"></a>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

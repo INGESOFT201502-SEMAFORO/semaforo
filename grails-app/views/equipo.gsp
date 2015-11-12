@@ -13,8 +13,19 @@
   <meta charset="UTF-8">
   <link rel="icon" href="http://unal.edu.co/fileadmin/templates/favicon.ico">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+  <asset:stylesheet src="bootstrap.min.css"/>
+  <asset:stylesheet src="demo.css"/>
+  <asset:stylesheet src="common.css"/>
+  <asset:stylesheet src="style3.css"/>
   <asset:stylesheet src="fontello.css"/>
   <asset:stylesheet src="estilos.css"/>
+  <asset:stylesheet src="columnas.css"/>
+  <asset:stylesheet src="responsiveslides.css"/>
+  <asset:javascript src="responsiveslides.js"/>
+  <asset:stylesheet src="animate.css"/>
+  <asset:javascript src="wow.min.js"/>
+  <asset:stylesheet src="default.css"/>
+  <asset:stylesheet src="font-awesome.min.css"/>
 
 </head>
 
@@ -49,11 +60,67 @@
 
   </div>
 </header>
+<br><br><br>
+<section id="mostrar">
+  <h2>Equipo</h2>
+  <p>Nuestro Equipo de Desarrollo de Semáforo, puedes encontrarlos en facebook...</p>
+  <p>Tan solo debes parar el puntero sobre el área de la foto deseada... ¿Apuestos verdad? :)</p>
+</section>
 
-<main>
+<div class="container">
 
+  <section class="main">
 
-</main>
+    <ul class="ch-grid">
+      <li>
+        <div class="ch-item">
+          <div class="ch-info">
+            <h3>Samuel Pérez Gaitán</h3>
+            <p>Desarrollo Html, CSS <a href="https://www.facebook.com/samusstinkguitar" target="_blank">Contacto en Facebook</a></p>
+          </div>
+          <div class="ch-thumb ch-img-1"></div>
+        </div>
+      </li>
+      <li>
+        <div class="ch-item">
+          <div class="ch-info">
+            <h3>David Rubio Barón</h3>
+            <p>Desarrollo - Testing<a href="https://www.facebook.com/Davalexer9304" target="_blank">Contacto en Facebook</a></p>
+          </div>
+          <div class="ch-thumb ch-img-2"></div>
+        </div>
+      </li>
+      <li>
+        <div class="ch-item">
+          <div class="ch-info">
+            <h3>Cesar Silva Guevara</h3>
+            <p>Desarrollo - Consultas Vehículos<a href="https://www.facebook.com/Cesar.A.10" target="_blank">Contacto en Facebook</a></p>
+          </div>
+          <div class="ch-thumb ch-img-3"></div>
+        </div>
+      </li>
+      <li>
+        <div class="ch-item">
+          <div class="ch-info">
+            <h3>Sergio Esteban Gavalán</h3>
+            <p>by Kawal Oberoi <a href="https://www.facebook.com/stephen.feynman.9" target="_blank">Contacto en Facebook</a></p>
+          </div>
+          <div class="ch-thumb ch-img-4"></div>
+        </div>
+      </li>
+      <li>
+        <div class="ch-item">
+          <div class="ch-info">
+            <h3>Devi Tara</h3>
+            <p>by Kawal Oberoi <a href="http://drbl.in/eFED">View on Dribbble</a></p>
+          </div>
+          <div class="ch-thumb ch-img-3"></div>
+        </div>
+      </li>
+    </ul>
+
+  </section>
+</div>
 
 <footer>
   <div class="container">

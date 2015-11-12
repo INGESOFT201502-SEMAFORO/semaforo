@@ -31,7 +31,8 @@ body{
     font-size: 22px;
     padding-bottom: 20px;
 }
-
+.form-4 input[type=number],
+.form-4 input[type=email],
 .form-4 input[type=text],
 .form-4 input[type=password] {
     /* Size and position */
@@ -73,12 +74,14 @@ body{
     color: rgba(37,21,26,0.5);
     text-shadow: 0 1px 0 rgba(255,255,255,0.15);
 }
-
+.form-4 input[type=number]:hover,
+.form-4 input[type=email]:hover,
 .form-4 input[type=text]:hover,
 .form-4 input[type=password]:hover {
     border-color: #333;
 }
-
+.form-4 input[type=number]:focus,
+.form-4 input[type=email]:focus,
 .form-4 input[type=text]:focus,
 .form-4 input[type=password]:focus,
 .form-4 input[type=submit]:focus {
@@ -198,6 +201,7 @@ body{
     inset 0 20px 30px rgba(255,255,255,0.3);
 }
 
-footer{
+#foot{
+    text-align: center;
     color: white;
 }

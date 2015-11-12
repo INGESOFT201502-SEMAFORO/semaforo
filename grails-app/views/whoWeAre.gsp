@@ -25,6 +25,9 @@
     <asset:stylesheet src="fontello.css"/>
     <asset:stylesheet src="estilos.css"/>
     <asset:stylesheet src="columnas.css"/>
+    <asset:stylesheet src="sBG.css"/>
+    <asset:stylesheet src="slideBG.css"/>
+    <asset:stylesheet src="normalize.css"/>
 </head>
 
 
