@@ -202,7 +202,7 @@
     <div class="container">
         <article class="item">
             <div class="icon">
-                <span class="fa fa-globe fa-4x wow bounceIn" data-wow-delay="0.1s"></span>
+                <span class="fa fa-globe fa-4x wow flip" data-wow-delay="0.1s"></span>
             </div>
             <section>
                 <h3>Servicio Web</h3>
@@ -211,7 +211,7 @@
         </article>
         <article class="item">
             <div class="icon">
-                <span class="fa fa-cog fa-4x wow bounceIn" data-wow-delay="0.4s"></span>
+                <span class="fa fa-cog fa-4x wow flip" data-wow-delay="0.4s"></span>
             </div>
             <section>
                 <h3>Automatización</h3>
@@ -220,7 +220,7 @@
         </article>
         <article class="item">
             <div class="icon">
-                <span class="fa fa-picture-o fa-4x wow bounceIn" data-wow-delay="0.7s"></span>
+                <span class="fa fa-picture-o fa-4x wow flip" data-wow-delay="0.7s"></span>
             </div>
             <section>
                 <h3>Interfaz Amigable</h3>
