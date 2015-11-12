@@ -9,7 +9,10 @@ class UrlMappings {
 
         "/"(view:"/home")
         "/equipo"(view: "/equipo")
-        "/somos"(view: "/somos")
+        "/ingresar"(view: "/ingresar")
+        "/whoWeAre"(view: "/whoWeAre")
+
+
         "500"(view:'/error')
 	}
 }

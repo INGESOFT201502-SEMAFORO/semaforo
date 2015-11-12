@@ -41,7 +41,6 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="${createLink(uri: '/somos')}">Quienes somos?</a></li>
-                    <li><a href="#contact">Contáctenos</a></li>
                     <li><a href="${createLink(uri: '/equipo')}">Equipo</a></li>
                 </ul>
                 <g:if test="${session.cliente}" >
