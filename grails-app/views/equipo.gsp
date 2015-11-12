@@ -103,7 +103,7 @@
         <div class="ch-item">
           <div class="ch-info">
             <h3>Sergio Esteban Gavalán</h3>
-            <p>by Kawal Oberoi <a href="https://www.facebook.com/stephen.feynman.9" target="_blank">Contacto en Facebook</a></p>
+            <p>Desarrollo - Cargo<a href="https://www.facebook.com/stephen.feynman.9" target="_blank">Contacto en Facebook</a></p>
           </div>
           <div class="ch-thumb ch-img-4"></div>
         </div>
@@ -111,10 +111,10 @@
       <li>
         <div class="ch-item">
           <div class="ch-info">
-            <h3>Devi Tara</h3>
-            <p>by Kawal Oberoi <a href="http://drbl.in/eFED">View on Dribbble</a></p>
+            <h3>Juan Pablo Arias</h3>
+            <p>Desarrollo - Cargo<a href="https://www.facebook.com/juanpablo.arias.50" target="_blank">Contacto en Facebook</a></p>
           </div>
-          <div class="ch-thumb ch-img-3"></div>
+          <div class="ch-thumb ch-img-5"></div>
         </div>
       </li>
     </ul>
