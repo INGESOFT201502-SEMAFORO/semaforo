@@ -9,7 +9,7 @@ import spock.lang.Specification
 @TestFor(Vehiculo)
 class VehiculoSpec extends Specification {
 
-    void "la placa debe ser unica"() {
+    /*void "la placa debe ser unica"() {
             when :
             def vehiculo = new Vehiculo(
                     placa: "XTY-123",
@@ -49,7 +49,7 @@ class VehiculoSpec extends Specification {
             then :
             !vehiculo2.validate()
         }
-
+*/
         void "la placa no debe ser nula"() {
                 when :
                 def vehiculo = new Vehiculo(
@@ -91,12 +91,6 @@ class VehiculoSpec extends Specification {
                 then:
                 !vehiculo.validate()
         }
-
-
-
-
-
-
 
 
     }
