@@ -8,4 +8,8 @@ class Operario extends Usuario{
     static constraints = {
 		especialidad blank: false, nullable: false
     }
+
+	String toString() {
+		return "Especialidad: " + especialidad
+	}
 }
