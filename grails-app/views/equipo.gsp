@@ -85,7 +85,7 @@
         <div class="ch-item">
           <div class="ch-info">
             <h3>David Rubio Barón</h3>
-            <p>Desarrollo - Testing<a href="https://www.facebook.com/Davalexer9304" target="_blank">Contacto en Facebook</a></p>
+            <p>Desarrollo - Testing, Html, CSS<a href="https://www.facebook.com/Davalexer9304" target="_blank">Contacto en Facebook</a></p>
           </div>
           <div class="ch-thumb ch-img-2"></div>
         </div>
