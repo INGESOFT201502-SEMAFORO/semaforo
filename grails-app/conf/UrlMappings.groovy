@@ -7,7 +7,7 @@ class UrlMappings {
             }
         }
 
-        "/"(view:"/home")
+        "/home"(view:"/home")
         "/equipo"(view: "/equipo")
         "/ingresar"(view: "/ingresar")
         "/whoWeAre"(view: "/whoWeAre")
