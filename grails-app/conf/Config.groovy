@@ -95,6 +95,8 @@ environments {
     }
 }
 
+//grails.app.context = "/"
+
 // log4j configuration
 log4j.main = {
     // Example of changing the log pattern for the default console appender:

@@ -7,7 +7,6 @@
 			<span class="required-indicator">*</span>
 		</label>
 		<g:textField class="form-control" name="nombre" maxlength="50" required="" value="${clienteInstance?.nombre}"/>
-
 	</div>
 </div>
 
@@ -50,7 +49,7 @@
 			<g:message code="cliente.edad.label" default="Edad" />
 			<span class="required-indicator">*</span>
 		</label>
-		<g:field class="form-control" name="edad" type="number" min="18" value="${clienteInstance.edad}" required=""/>
+		<g:textField class="form-control" name="edad" type="number" min="18" value="${clienteInstance.edad}" required=""/>
 
 	</div>
 </div>
@@ -61,7 +60,7 @@
 			<g:message code="cliente.cedula.label" default="Cedula" />
 			<span class="required-indicator">*</span>
 		</label>
-		<g:field class="form-control" name="cedula" type="number" value="${clienteInstance.cedula}" required=""/>
+		<g:textField class="form-control" name="cedula" type="number" value="${clienteInstance.cedula}" required=""/>
 
 	</div>
 </div>
