@@ -20,6 +20,7 @@
     <title>Semáforo</title>
     <asset:stylesheet src="bootstrap.min.css"/>
     <asset:stylesheet src="theme.css"/>
+    <asset:javascript src="jquery.min.js" />
     <g:layoutHead/>
 
 </head>
@@ -79,6 +80,5 @@
         </footer>
     </div>
 
-<asset:javascript src="jquery.min.js" />
 <asset:javascript src="bootstrap.min.js"/>
 </body></html>
