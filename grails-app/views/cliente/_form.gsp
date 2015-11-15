@@ -3,6 +3,7 @@
 <div class="form-group">
 	<div class="fieldcontain ${hasErrors(bean: clienteInstance, field: 'nombre', 'error')} required">
 		<label for="nombre">
+			<span class="error nombre"></span>
 			<g:message code="cliente.nombre.label" default="Nombre" />
 			<span class="required-indicator">*</span>
 		</label>
@@ -13,6 +14,7 @@
 <div class="form-group">
 	<div class="fieldcontain ${hasErrors(bean: clienteInstance, field: 'usuario', 'error')} required">
 		<label for="usuario">
+			<span class="error usuario"></span>
 			<g:message code="cliente.usuario.label" default="Usuario" />
 			<span class="required-indicator">*</span>
 		</label>
@@ -24,6 +26,7 @@
 <div class="form-group">
 	<div class="fieldcontain ${hasErrors(bean: clienteInstance, field: 'correo', 'error')} required">
 		<label for="correo">
+			<span class="error correo"></span>
 			<g:message code="cliente.correo.label" default="Correo" />
 			<span class="required-indicator">*</span>
 		</label>
@@ -35,6 +38,7 @@
 <div class="form-group">
 	<div class="fieldcontain ${hasErrors(bean: clienteInstance, field: 'password', 'error')} required">
 		<label for="password">
+			<span class="error password"></span>
 			<g:message code="cliente.password.label" default="Password" />
 			<span class="required-indicator">*</span>
 		</label>

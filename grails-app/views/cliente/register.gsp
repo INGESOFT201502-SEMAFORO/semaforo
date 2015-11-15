@@ -13,20 +13,9 @@
     <link rel="icon" href="http://unal.edu.co/fileadmin/templates/favicon.ico">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <asset:stylesheet src="bootstrap.min.css"/>
-    <asset:stylesheet src="demo.css"/>
-    <asset:stylesheet src="common.css"/>
-    <asset:stylesheet src="style2.css"/>
-    <asset:stylesheet src="fontello.css"/>
     <asset:stylesheet src="estilos.css"/>
-    <asset:stylesheet src="columnas.css"/>
-    <asset:stylesheet src="responsiveslides.css"/>
-    <asset:javascript src="responsiveslides.js"/>
-    <asset:stylesheet src="animate.css"/>
-    <asset:javascript src="wow.min.js"/>
-    <asset:stylesheet src="default.css"/>
-    <asset:stylesheet src="font-awesome.min.css"/>
     <asset:stylesheet src="loginStyle.css"/>
-
+    <asset:stylesheet src="fontello.css"/>
     <g:set var="entityName" value="${message(code: 'cliente.label', default: 'Cliente')}" />
     <title><g:message code="default.create.label" args="[entityName]" /></title>
 </head>
@@ -68,14 +57,6 @@
             <div class="message" role="status">${flash.message}</div>
             </div>
         </g:if>
-        <g:hasErrors bean="${clienteInstance}">
-            <ul class="errors" role="alert">
-                <g:eachError bean="${clienteInstance}" var="error">
-                    <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-                </g:eachError>
-            </ul>
-        </g:hasErrors>
-
     </g:if>
     <g:else>
         <br><br><br><br><br><br>
@@ -93,11 +74,18 @@
 
 
     </g:else>
+    <g:hasErrors bean="${clienteInstance}">
+        <ul class="errors" role="alert">
+            <g:eachError bean="${clienteInstance}" var="error">
+                <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
+            </g:eachError>
+        </ul>
+    </g:hasErrors>
 </div>
 
-
-    <br><br><br>
-    <div class="container" id="foot">
+<footer>
+    <br><br><br><br>
+    <div class="container">
         <p class="copy">Semáforo &copy; 2015</p>
         <div class="sociales">
             <a class="icon-fb" href="#"></a>
@@ -105,6 +93,14 @@
             <a class="icon-gp" href="#"></a>
         </div>
     </div>
+</footer>
+<script>
+    <g:hasErrors bean="${clienteInstance}">
+    <g:eachError bean="${clienteInstance}" var="error">
+    document.querySelector(".error.${error.field}").innerHTML = '<g:message error="${error}"/>';
+    </g:eachError>
+    </g:hasErrors>
 
+</script>
 </body>
 </html>
