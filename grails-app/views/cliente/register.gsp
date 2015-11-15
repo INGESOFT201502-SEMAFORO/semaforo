@@ -13,9 +13,20 @@
     <link rel="icon" href="http://unal.edu.co/fileadmin/templates/favicon.ico">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <asset:stylesheet src="bootstrap.min.css"/>
-    <asset:stylesheet src="estilos.css"/>
-    <asset:stylesheet src="loginStyle.css"/>
+    <asset:stylesheet src="demo.css"/>
+    <asset:stylesheet src="common.css"/>
+    <asset:stylesheet src="style2.css"/>
     <asset:stylesheet src="fontello.css"/>
+    <asset:stylesheet src="estilos.css"/>
+    <asset:stylesheet src="columnas.css"/>
+    <asset:stylesheet src="responsiveslides.css"/>
+    <asset:javascript src="responsiveslides.js"/>
+    <asset:stylesheet src="animate.css"/>
+    <asset:javascript src="wow.min.js"/>
+    <asset:stylesheet src="default.css"/>
+    <asset:stylesheet src="font-awesome.min.css"/>
+    <asset:stylesheet src="loginStyle.css"/>
+
     <g:set var="entityName" value="${message(code: 'cliente.label', default: 'Cliente')}" />
     <title><g:message code="default.create.label" args="[entityName]" /></title>
 </head>
@@ -84,9 +95,9 @@
     </g:else>
 </div>
 
-<footer>
-    <br><br><br><br>
-    <div class="container">
+
+    <br><br><br>
+    <div class="container" id="foot">
         <p class="copy">Semáforo &copy; 2015</p>
         <div class="sociales">
             <a class="icon-fb" href="#"></a>
@@ -94,6 +105,6 @@
             <a class="icon-gp" href="#"></a>
         </div>
     </div>
-</footer>
+
 </body>
 </html>
