@@ -17,7 +17,7 @@
     <asset:stylesheet src="loginStyle.css"/>
     <asset:stylesheet src="fontello.css"/>
     <g:set var="entityName" value="${message(code: 'cliente.label', default: 'Cliente')}" />
-    <title><g:message code="default.create.label" args="[entityName]" /></title>
+    <title>Registrate en Semáforo</title>
 </head>
 <body>
 <header>
@@ -75,7 +75,8 @@
 
                     <g:render template="form"/>
                     <br>
-                    <g:submitButton class="form-4" id="regButton" name="create"  value="${message(code: 'default.button.create.label', default: 'Create')}" />
+                    %{--<g:submitButton class="form-4" id="regButton" name="create"  value="${message(code: 'default.button.create.label', default: 'Create')}" />--}%
+                    <g:submitButton class="form-4" id="regButton" name="create"  value="Registrarse" />
                     <a class="btn btn-default" href="${createLink(uri: '/home')}">Volver</a>
                 </g:form>
         </div>
