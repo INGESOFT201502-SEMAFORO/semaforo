@@ -95,7 +95,7 @@ environments {
     }
 }
 
-grails.app.context = "/"
+//grails.app.context = "/"
 
 // log4j configuration
 log4j.main = {
