@@ -57,14 +57,6 @@
             <div class="message" role="status">${flash.message}</div>
             </div>
         </g:if>
-        <g:hasErrors bean="${clienteInstance}">
-            <ul class="errors" role="alert">
-                <g:eachError bean="${clienteInstance}" var="error">
-                    <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-                </g:eachError>
-            </ul>
-        </g:hasErrors>
-
     </g:if>
     <g:else>
         <br><br><br><br><br><br>
@@ -82,6 +74,13 @@
 
 
     </g:else>
+    <g:hasErrors bean="${clienteInstance}">
+        <ul class="errors" role="alert">
+            <g:eachError bean="${clienteInstance}" var="error">
+                <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
+            </g:eachError>
+        </ul>
+    </g:hasErrors>
 </div>
 
 <footer>
@@ -95,5 +94,13 @@
         </div>
     </div>
 </footer>
+<script>
+    <g:hasErrors bean="${clienteInstance}">
+    <g:eachError bean="${clienteInstance}" var="error">
+    document.querySelector(".error.${error.field}").innerHTML = '<g:message error="${error}"/>';
+    </g:eachError>
+    </g:hasErrors>
+
+</script>
 </body>
 </html>
