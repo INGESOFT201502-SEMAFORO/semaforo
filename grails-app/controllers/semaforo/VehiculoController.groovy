@@ -1,18 +1,16 @@
 package semaforo
 
+import grails.converters.JSON
 import groovy.sql.Sql
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
-import grails.converters.JSON
 
 @Transactional(readOnly = true)
 class VehiculoController {
-    def dataSource
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE", saveApp: "POST", updateApp: "PUT"]
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    
     def getTipoVehiculo(){
         def query = "select distinct(tipo_vehiculo) as tipo from guia order by tipo asc"
         def sql = Sql.newInstance(dataSource)
@@ -58,18 +56,27 @@ class VehiculoController {
     }
 
     def getReferencia3(){
-        def query = "select id,codigo,referencia3 from guia where marca='${params.marca}' and referencia1='${params.referencia1}' and referencia2='${params.referencia2}' order by referencia3 asc"
+        def query = "select referencia3 from guia where marca='${params.marca}' and referencia1='${params.referencia1}' and referencia2='${params.referencia2}' order by referencia3 asc"
         def sql = Sql.newInstance(dataSource)
         def datos = []
         sql.eachRow(query){ row ->
-            datos.add([id : row.id, codigo: row.codigo, referencia3 : row.referencia3])
+            datos.add(row.referencia3)
         }
         sql.close()
         render datos as JSON
     }
 
-    def createRequest(){
-
+    def getModelo(){
+        def marca = params.marca
+        def referencia1 = params.referencia1
+        def referencia2 = params.referencia2
+        def referencia3 = params.referencia3
+        def datos = []
+        def query = ValorModelo.where {guia.marca == marca && guia.referencia1==referencia1 && guia.referencia2 == referencia2 && guia.referencia3 ==referencia3}
+        query.each {it -> println "Modelo: ${it.modelo} valor: ${it.valor}"
+            datos.add([modelo: it.modelo, valor: it.valor])
+        }
+        render datos as JSON
     }
 
     def indexApp(Integer max) {
@@ -163,19 +170,16 @@ class VehiculoController {
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Vehiculo.list(params), model:[vehiculoInstanceCount: Vehiculo.count()]
-        // accion por defecto render index view con la lista de instancias
-    }
+    }// accion por defecto render index view con la lista de instancias
 
     def show(Vehiculo vehiculoInstance) {
         respond vehiculoInstance
-        // grails busca un id en la peticion y buca el objeto con ese id y lo trae
-        //respond  retorna esta instancia y luego renderiza la vista show
-    }
+    }// grails busca un id en la peticion y buca el objeto con ese id y lo trae
+    //respond  retorna esta instancia y luego renderiza la vista show
 
     def create() {
         respond new Vehiculo(params)
-        // crea la instancia con los parametros, luego rendre la vista create
-    }
+    }// crea la instancia con los parametros, luego rendre la vista create
 
     @Transactional
     def save(Vehiculo vehiculoInstance) {
@@ -197,7 +201,7 @@ class VehiculoController {
                 redirect vehiculoInstance
             }
             '*' { respond vehiculoInstance, [status: CREATED] }
-        } //esta accion es llamada desde create view
+        }//esta accion es llamada desde create view
         // busca una instancia con id provisto si no la hay..
         // si la hay verifica en busca de errores de validacion, si hay re-render la vista create
         //form es usado en el caso de envio de formularios, cuando el formulario en la create view
@@ -229,8 +233,8 @@ class VehiculoController {
                 redirect vehiculoInstance
             }
             '*'{ respond vehiculoInstance, [status: OK] }
-        }
-    }// response redirige a editview,
+        }// response redirige a editview,
+    }
 
     @Transactional
     def delete(Vehiculo vehiculoInstance) {

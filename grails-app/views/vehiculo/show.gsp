@@ -41,6 +41,51 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${vehiculoInstance?.marca}">
+				<li class="fieldcontain">
+					<span id="marca-label" class="property-label"><g:message code="vehiculo.marca.label" default="Marca" /></span>
+					
+						<span class="property-value" aria-labelledby="marca-label"><g:fieldValue bean="${vehiculoInstance}" field="marca"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${vehiculoInstance?.tipoVehiculo}">
+				<li class="fieldcontain">
+					<span id="tipoVehiculo-label" class="property-label"><g:message code="vehiculo.tipoVehiculo.label" default="Tipo Vehiculo" /></span>
+					
+						<span class="property-value" aria-labelledby="tipoVehiculo-label"><g:fieldValue bean="${vehiculoInstance}" field="tipoVehiculo"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${vehiculoInstance?.referencia1}">
+				<li class="fieldcontain">
+					<span id="referencia1-label" class="property-label"><g:message code="vehiculo.referencia1.label" default="Referencia1" /></span>
+					
+						<span class="property-value" aria-labelledby="referencia1-label"><g:fieldValue bean="${vehiculoInstance}" field="referencia1"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${vehiculoInstance?.referencia2}">
+				<li class="fieldcontain">
+					<span id="referencia2-label" class="property-label"><g:message code="vehiculo.referencia2.label" default="Referencia2" /></span>
+					
+						<span class="property-value" aria-labelledby="referencia2-label"><g:fieldValue bean="${vehiculoInstance}" field="referencia2"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${vehiculoInstance?.referencia3}">
+				<li class="fieldcontain">
+					<span id="referencia3-label" class="property-label"><g:message code="vehiculo.referencia3.label" default="Referencia3" /></span>
+					
+						<span class="property-value" aria-labelledby="referencia3-label"><g:fieldValue bean="${vehiculoInstance}" field="referencia3"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${vehiculoInstance?.modelo}">
 				<li class="fieldcontain">
 					<span id="modelo-label" class="property-label"><g:message code="vehiculo.modelo.label" default="Modelo" /></span>
@@ -50,20 +95,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${vehiculoInstance?.color}">
+				<g:if test="${vehiculoInstance?.valor}">
 				<li class="fieldcontain">
-					<span id="color-label" class="property-label"><g:message code="vehiculo.color.label" default="Color" /></span>
+					<span id="valor-label" class="property-label"><g:message code="vehiculo.valor.label" default="Valor" /></span>
 					
-						<span class="property-value" aria-labelledby="color-label"><g:fieldValue bean="${vehiculoInstance}" field="color"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${vehiculoInstance?.marca}">
-				<li class="fieldcontain">
-					<span id="marca-label" class="property-label"><g:message code="vehiculo.marca.label" default="Marca" /></span>
-					
-						<span class="property-value" aria-labelledby="marca-label"><g:fieldValue bean="${vehiculoInstance}" field="marca"/></span>
+						<span class="property-value" aria-labelledby="valor-label"><g:fieldValue bean="${vehiculoInstance}" field="valor"/></span>
 					
 				</li>
 				</g:if>
