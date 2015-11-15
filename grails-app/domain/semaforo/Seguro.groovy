@@ -1,19 +1,35 @@
 package semaforo
 import groovy.json.*
+
+
 class Seguro {
 
-	Date fechaCompra
-	Date fechaVencimiento
 	Double valor
-
-	static belongsTo = [vehiculo: Vehiculo, empresa: Empresa]
+	Double coberturaTotal
+	String deducibleTotal
+	Double coberturaParcial
+	String deducibleParcial
+	Boolean abogado
+	Boolean vehiculoRemplazo
+	Boolean gastosTransporte
+	Boolean grua
+	Boolean chofer
+	Double responsabilidadCivil 
+	
+	static belongsTo = [empresa: Empresa, valorModelo : ValorModelo]
 
     static constraints = {
-		fechaCompra blank: false, nullable: false, date: true
-		fechaVencimiento blank: false, nullable: false, date: true
 		valor blank: false, nullable: false
+		coberturaTotal blank: false, nullable: false
+		deducibleParcial blank: false, nullable: false
+		coberturaParcial blank: false, nullable: false
+		deducibleParcial blank: false, nullable: false
+		abogado blank: false, nullable: false
+		vehiculoRemplazo blank: false, nullable: false
+		gastosTransporte blank: false, nullable: false
+		grua blank: false, nullable: false
+		chofer blank: false, nullable: false
+		responsabilidadCivil blank: false, nullable: false
     }
-	String toString() {
-		return "Fecha de Compra: " + fechaCompra +", Fecha de vencimiento: " + fechaVencimiento +", Valor: " + valor
-	}
+
 }
