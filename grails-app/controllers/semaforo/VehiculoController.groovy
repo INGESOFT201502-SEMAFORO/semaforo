@@ -67,6 +67,40 @@ class VehiculoController {
         sql.close()
         render datos as JSON
     }
+	
+	def getModelos(){
+		def query = "select * from valor_modelo where guia_id=${params.id}"
+		def sql = Sql.newInstance(dataSource)
+        def datos = []
+        sql.eachRow(query){ row ->
+			datos.add([id : row.id, modelo : row.modelo, valor : row.valor])
+		}
+		render datos as JSON
+	}
+	
+	def getSeguros(){
+		def valorModelo = ValorModelo.findById(params.id);
+		def seguros = Seguro.findAllWhere(valorModelo : valorModelo)
+		def datos = []
+		seguros.each {
+			datos.add([
+				id : it.id,
+				valor : it.valor,
+				coberturaTotal : it.coberturaTotal,
+				deducibleTotal : it.deducibleTotal,
+				coberturaParcial : it.coberturaParcial,
+				deducibleParcial : it.deducibleParcial,
+				abogado : it.abogado,
+				vehiculoRemplazo : it.vehiculoRemplazo,
+				gastosTransporte : it.gastosTransporte,
+				grua : it.grua,
+				chofer : it.chofer,
+				responsabilidadCivil : it.responsabilidadCivil,
+				empresa : it.empresa.nombre	
+			])
+		}
+		render datos as JSON
+	}
 
     def createRequest(){
 
