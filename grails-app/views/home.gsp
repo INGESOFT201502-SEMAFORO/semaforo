@@ -78,14 +78,7 @@
 
     </div>
 </header>
-<!--<section id="banner"> BANNER SUPERIOR
-    <img src="http://7-themes.com/data_images/out/21/6839236-traffic-light.jpg">
-    <div class="container">
-        <h2>Semáforo, regístrate y afilia tu vehículo!</h2>
-        <p>¿Cual es el mejor seguro para tu vehículo?</p>
-        <a href="#">Leer más</a>
-    </div>
-</section>-->
+
 <div class="slider"> <!--BANNER HOME-->
     <ul class="rslides" id="slider-home">
         <li>
