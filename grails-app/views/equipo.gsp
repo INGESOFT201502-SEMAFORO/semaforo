@@ -20,11 +20,8 @@
   <asset:stylesheet src="fontello.css"/>
   <asset:stylesheet src="estilos.css"/>
   <asset:stylesheet src="columnas.css"/>
-  <asset:stylesheet src="responsiveslides.css"/>
-  <asset:javascript src="responsiveslides.js"/>
-  <asset:stylesheet src="animate.css"/>
-  <asset:javascript src="wow.min.js"/>
   <asset:stylesheet src="default.css"/>
+  <asset:stylesheet src="equipoComplementos.css"/>
   <asset:stylesheet src="font-awesome.min.css"/>
 
 </head>
