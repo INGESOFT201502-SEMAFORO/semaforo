@@ -28,13 +28,13 @@
 					
 						<g:sortableColumn property="placa" title="${message(code: 'vehiculo.placa.label', default: 'Placa')}" />
 					
-						<g:sortableColumn property="modelo" title="${message(code: 'vehiculo.modelo.label', default: 'Modelo')}" />
-					
-						<g:sortableColumn property="color" title="${message(code: 'vehiculo.color.label', default: 'Color')}" />
-					
 						<g:sortableColumn property="marca" title="${message(code: 'vehiculo.marca.label', default: 'Marca')}" />
 					
-						<th><g:message code="vehiculo.cliente.label" default="Cliente" /></th>
+						<g:sortableColumn property="tipoVehiculo" title="${message(code: 'vehiculo.tipoVehiculo.label', default: 'Tipo Vehiculo')}" />
+					
+						<g:sortableColumn property="referencia1" title="${message(code: 'vehiculo.referencia1.label', default: 'Referencia1')}" />
+					
+						<g:sortableColumn property="referencia2" title="${message(code: 'vehiculo.referencia2.label', default: 'Referencia2')}" />
 					
 					</tr>
 				</thead>
@@ -46,13 +46,13 @@
 					
 						<td>${fieldValue(bean: vehiculoInstance, field: "placa")}</td>
 					
-						<td>${fieldValue(bean: vehiculoInstance, field: "modelo")}</td>
-					
-						<td>${fieldValue(bean: vehiculoInstance, field: "color")}</td>
-					
 						<td>${fieldValue(bean: vehiculoInstance, field: "marca")}</td>
 					
-						<td>${fieldValue(bean: vehiculoInstance, field: "cliente")}</td>
+						<td>${fieldValue(bean: vehiculoInstance, field: "tipoVehiculo")}</td>
+					
+						<td>${fieldValue(bean: vehiculoInstance, field: "referencia1")}</td>
+					
+						<td>${fieldValue(bean: vehiculoInstance, field: "referencia2")}</td>
 					
 					</tr>
 				</g:each>

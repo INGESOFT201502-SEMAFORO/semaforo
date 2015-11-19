@@ -13,6 +13,7 @@ class ClienteController {
         def clientes = Cliente.list()
         [clientes: clientes]
     }
+    
 
     def register(){
         if (session.cliente != null){

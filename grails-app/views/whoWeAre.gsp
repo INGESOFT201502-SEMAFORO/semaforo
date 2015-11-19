@@ -62,9 +62,10 @@
 </header>
 
 <ul class="cb-slideshow">
-    <li><span>1</span><div><h3>Misión</h3></div></li>
+    <li><span>1</span><div><h3>Misión</h3>
+    </div></li>
     <li><span>Image 02</span><div><h3>Visión</h3></div></li>
-    <li><span>Image 03</span><div><h3>Cómo Trabamos</h3></div></li>
+    <li><span>Image 03</span><div><h3>Cómo Trabajamos</h3></div></li>
     <li><span>Image 04</span><div><h3>Contacto</h3></div></li>
     <li><span>Image 05</span><div><h3>Otro campo</h3></div></li>
     <li><span>Image 06</span><div><h3>ultima chachara</h3></div></li>

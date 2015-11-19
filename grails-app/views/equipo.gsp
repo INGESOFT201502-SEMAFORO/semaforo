@@ -20,11 +20,8 @@
   <asset:stylesheet src="fontello.css"/>
   <asset:stylesheet src="estilos.css"/>
   <asset:stylesheet src="columnas.css"/>
-  <asset:stylesheet src="responsiveslides.css"/>
-  <asset:javascript src="responsiveslides.js"/>
-  <asset:stylesheet src="animate.css"/>
-  <asset:javascript src="wow.min.js"/>
   <asset:stylesheet src="default.css"/>
+  <asset:stylesheet src="equipoComplementos.css"/>
   <asset:stylesheet src="font-awesome.min.css"/>
 
 </head>
@@ -63,7 +60,7 @@
 <br><br><br>
 <section id="mostrar">
   <h2>Equipo</h2>
-  <p>Nuestro Equipo de Desarrollo de Semáforo, puedes encontrarlos en facebook...</p>
+  <p>Nuestro Equipo de Desarrollo de Semáforo, puedes encontrarlos en redes sociales...</p>
   <p>Tan solo debes parar el puntero sobre el área de la foto deseada... ¿Apuestos verdad? :)</p>
 </section>
 
@@ -102,8 +99,8 @@
       <li>
         <div class="ch-item">
           <div class="ch-info">
-            <h3>Sergio Esteban Gavalán</h3>
-            <p>Desarrollo - Cargo<a href="https://www.facebook.com/stephen.feynman.9" target="_blank">Contacto en Facebook</a></p>
+            <h3>Sergio Esteban Gabalán</h3>
+            <p>Desarrollo - Cargo<a href="https://co.linkedin.com/in/seresgavillar" target="_blank">Contacto en LinkedIn</a></p>
           </div>
           <div class="ch-thumb ch-img-4"></div>
         </div>

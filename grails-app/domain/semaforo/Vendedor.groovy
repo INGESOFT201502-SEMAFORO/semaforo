@@ -8,8 +8,7 @@ class Vendedor extends Usuario {
 	static belongsTo = [empresa: Empresa]
 	static hasMany = [cita:Cita]
 
-    static constraints = { 
-		
+    static constraints = {
 		salario blank:false
     }
 	String toString() {

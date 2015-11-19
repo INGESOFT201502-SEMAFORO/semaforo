@@ -4,8 +4,9 @@ class Cita {
 	
 	Date fecha
 	String lugar
+	String estado
 
-	static belongsTo = [cliente: Cliente]
+	static belongsTo = [seguro : Seguro, vehiculo : Vehiculo]
 	
     static constraints = {
 		fecha nullable: false, date: true
