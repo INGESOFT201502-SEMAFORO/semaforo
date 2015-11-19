@@ -9,7 +9,7 @@
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-
+		<asset:stylesheet src="vehReqView.css"/>
 		<asset:stylesheet src="bootstrap.min.css"/>
 		<asset:stylesheet src="style3.css"/>
 		<asset:stylesheet src="fontello.css"/>
@@ -60,37 +60,39 @@
 		<p>Llena el siguiente formulario de forma fácil y rápida</p>
 		<br><br><br>
 	</section>
+		<div class="container" id="llenado">
+			<table>
+				<tr>
+					<th>Tipo de vehículo</th>
+					<td id="tipo_vehiculo"></td>
+				</tr>
+				<tr id="tr_marca" class="hidden">
+					<th>Marca</th>
+					<td id="marca"></td>
+				</tr>
+				<tr id="tr_referencia1" class="hidden">
+					<th>Referencia 1</th>
+					<td id="referencia1"></td>
+				</tr>
+				<tr id="tr_referencia2" class="hidden">
+					<th>Referencia 2</th>
+					<td id="referencia2"></td>
+				</tr>
+				<tr id="tr_referencia3" class="hidden">
+					<th>Referencia 3</th>
+					<td id="referencia3"></td>
+				</tr>
+				<tr id="tr_modelo" class="hidden">
+					<th>Modelo</th>
+					<td id="modelo"></td>
+				</tr>
+				<tr id="tr_valor" class="hidden">
+					<th>Valor asegurado</th>
+					<td id="valor"></td>
+				</tr>
+			</table>
+		</div>
 
-    	<table>
-    		<tr>
-    			<th>Tipo de vehículo</th>
-    			<td id="tipo_vehiculo"></td>
-    		</tr>
-    		<tr id="tr_marca" class="hidden">
-    			<th>Marca</th>
-    			<td id="marca"></td>
-    		</tr>
-    		<tr id="tr_referencia1" class="hidden">
-    			<th>Referencia 1</th>
-    			<td id="referencia1"></td>
-    		</tr>
-    		<tr id="tr_referencia2" class="hidden">
-    			<th>Referencia 2</th>
-    			<td id="referencia2"></td>
-    		</tr>
-			<tr id="tr_referencia3" class="hidden">
-				<th>Referencia 3</th>
-				<td id="referencia3"></td>
-			</tr>
-			<tr id="tr_modelo" class="hidden">
-				<th>Modelo</th>
-				<td id="modelo"></td>
-			</tr>
-			<tr id="tr_valor" class="hidden">
-				<th>Valor asegurado</th>
-				<td id="valor"></td>
-			</tr>
-    	</table>
     	<br><br>
     	<div id="seguros" class="hidden"></div>
 
@@ -205,7 +207,8 @@
 				</tr>
 			</table>
 		{{else}}
-		No hay seguros disponibles
+		<div class="container">No hay seguros disponibles para este vehículo</div>
+
 		{{/if}}
 		</script>
     	<script>

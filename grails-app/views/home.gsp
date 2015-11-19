@@ -31,11 +31,6 @@
     <asset:javascript src="wow.min.js"/>
     <asset:stylesheet src="default.css"/>
     <asset:stylesheet src="font-awesome.min.css"/>
-
-
-
-
-
     <script>
         $(document).ready(function(){
             $("#slider-home").responsiveSlides({
