@@ -31,7 +31,7 @@
 			<label class="icon-menu" for="menu-bar"></label>
 
 			<nav class="menu">
-				<a href="${createLink(uri: '/home')}">Inicio</a>
+				<a href="${createLink(uri: '/')}">Inicio</a>
 				<a href="${createLink(uri: '/whoWeAre')}">¿Quienes Somos?</a>
 				<a href="${createLink(uri: '/equipo')}">Equipo</a>
 				<g:if test="${session.cliente}" >
