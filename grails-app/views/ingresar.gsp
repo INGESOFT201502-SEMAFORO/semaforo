@@ -77,7 +77,7 @@
         <input type="submit" name="submit" value="Iniciar Sesión">
     </p><br>
 
-    <a href="${createLink(uri: '/home')}">Volver</a>
+    <a href="${createLink(uri: '/')}">Volver</a>
 </g:form>
 
 

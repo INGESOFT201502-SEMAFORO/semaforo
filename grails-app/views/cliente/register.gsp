@@ -27,7 +27,7 @@
         <label class="icon-menu" for="menu-bar"></label>
 
         <nav class="menu">
-            <a href="${createLink(uri: '/home')}">Inicio</a>
+            <a href="${createLink(uri: '/')}">Inicio</a>
             <a href="${createLink(uri: '/whoWeAre')}">¿Quienes Somos?</a>
             <a href="${createLink(uri: '/equipo')}">Equipo</a>
             <g:if test="${session.cliente}" >
@@ -69,7 +69,7 @@
                     <br>
                     %{--<g:submitButton class="form-4" id="regButton" name="create"  value="${message(code: 'default.button.create.label', default: 'Create')}" />--}%
                     <g:submitButton class="form-4" id="regButton" name="create"  value="Registrarse" />
-                    <a class="btn btn-default" href="${createLink(uri: '/home')}">Volver</a>
+                    <a class="btn btn-default" href="${createLink(uri: '/')}">Volver</a>
                 </g:form>
         </div>
 
