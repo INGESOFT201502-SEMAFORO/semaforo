@@ -99,6 +99,7 @@
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js"></script>
     	<script id="seguros-template" type="text/x-handlebars-template">
     	{{#if this.length}}
+		<div class="container">
 			<table border=1 class="table">
 				<tr>
 					<th>Características</th>
@@ -206,6 +207,10 @@
 					{{/each}}
 				</tr>
 			</table>
+
+
+		</div>
+
 		{{else}}
 		<div class="container">No hay seguros disponibles para este vehículo</div>
 
