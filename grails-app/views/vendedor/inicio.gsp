@@ -14,7 +14,7 @@
                 <td><strong>N°</strong></td>
                 <td><strong>Nombre</strong></td>
                 <td><strong>Email</strong></td>
-                <g:each in="${vendedores}" var="user" status="1">
+                <g:each in="${vendedores}" var="user" status="i">
                     <tr>
                         <td>${i+1}</td>
                         <td>${user.nombre}</td>

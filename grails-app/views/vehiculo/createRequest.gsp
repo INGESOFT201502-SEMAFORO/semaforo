@@ -17,6 +17,8 @@
 		<asset:stylesheet src="columnas.css"/>
 		<asset:stylesheet src="default.css"/>
 		<asset:stylesheet src="font-awesome.min.css"/>
+        <asset:stylesheet src="bootstrap-select.css"/>
+        <asset:javascript src="bootstrap-select.js"/>
         <g:set var="entityName" value="${message(code: 'vehiculo.label', default: 'Vehiculo')}" />
         <title><g:message code="default.edit.label" args="[entityName]" /></title>
     </head>
