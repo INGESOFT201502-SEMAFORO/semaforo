@@ -131,7 +131,7 @@
                     <div class="ch-item ch-img-2" id="circle2">
                         <div class="ch-info">
                             <h3>Vendedor</h3>
-                            <p>Crea tu cuenta y ofrece tus servicios!<a href="http://drbl.in/eNXW">Regístrate</a></p>
+                            <p>Crea tu cuenta y ofrece tus servicios!<g:link controller="vendedor" action="register">Regístrate</g:link></p>
                         </div>
                     </div>
                 </li>
