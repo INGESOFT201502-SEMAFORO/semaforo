@@ -67,7 +67,7 @@
 
 <div class="container">
 
-  <section class="main">
+  <section>
 
     <ul class="ch-grid">
       <li>
@@ -124,7 +124,7 @@
   <div class="container">
     <p class="copy">Semáforo &copy; 2015</p>
     <div class="sociales">
-      <a class="icon-fb" href="#"></a>
+      <a class="icon-fb" href="https://www.facebook.com/SemaforoWeb/" target="_blank"></a>
       <a class="icon-twitter" href="#"></a>
       <a class="icon-gp" href="#"></a>
     </div>

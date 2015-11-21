@@ -186,7 +186,7 @@
             </ul>
         </section>
     </div>
-
+    <!--SECCION INFORMACION-->
     <div class="container">
         <div class="main row">
             <article class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
@@ -218,48 +218,50 @@
         </div>
 
     </div>
-</g:else>
-<!--SECCION INFORMACION-->
 
-
-<!--SECCION DE SERVICIOS-->
-<div class="container">
-<section class="servicios">
-    <hgroup class="titulos-wrap">
-        <h2 class="titulo wow bounceIn" data-wow-delay="0.3s">Nuestros Servicios</h2>
-        <h4 class="subtitulo wow bounceIn" data-wow-delay="0.6s">Lo que tenemos para ti :)</h4>
-    </hgroup>
+    <!--SECCION DE SERVICIOS-->
     <div class="container">
-        <article class="item">
-            <div class="icon">
-                <span class="fa fa-globe fa-4x wow flip" data-wow-delay="0.1s"></span>
+        <section class="servicios">
+            <hgroup class="titulos-wrap">
+                <h2 class="titulo wow bounceIn" data-wow-delay="0.3s">Nuestros Servicios</h2>
+                <h4 class="subtitulo wow bounceIn" data-wow-delay="0.6s">Lo que tenemos para ti :)</h4>
+            </hgroup>
+            <div class="container">
+                <article class="item">
+                    <div class="icon">
+                        <span class="fa fa-globe fa-4x wow flip" data-wow-delay="0.1s"></span>
+                    </div>
+                    <section>
+                        <h3>Servicio Web</h3>
+                        <p>Entra desde cualquier lugar, en cualquier momento... toda la información a tu alcance</p>
+                    </section>
+                </article>
+                <article class="item">
+                    <div class="icon">
+                        <span class="fa fa-cog fa-4x wow flip" data-wow-delay="0.4s"></span>
+                    </div>
+                    <section>
+                        <h3>Automatización</h3>
+                        <p>Tan solo debes ingresar los datos de tu vehículo y automáticamente generaremos el valor de tu seguro...</p>
+                    </section>
+                </article>
+                <article class="item">
+                    <div class="icon">
+                        <span class="fa fa-picture-o fa-4x wow flip" data-wow-delay="0.7s"></span>
+                    </div>
+                    <section>
+                        <h3>Interfaz Amigable</h3>
+                        <p>Lo ponemos de tal forma que puedas seguir las instrucciones fácilmente, se acabaron los formularios aburridos y complicados!</p>
+                    </section>
+                </article>
             </div>
-            <section>
-                <h3>Servicio Web</h3>
-                <p>Entra desde cualquier lugar, en cualquier momento... toda la información a tu alcance</p>
-            </section>
-        </article>
-        <article class="item">
-            <div class="icon">
-                <span class="fa fa-cog fa-4x wow flip" data-wow-delay="0.4s"></span>
-            </div>
-            <section>
-                <h3>Automatización</h3>
-                <p>Tan solo debes ingresar los datos de tu vehículo y automáticamente generaremos el valor de tu seguro...</p>
-            </section>
-        </article>
-        <article class="item">
-            <div class="icon">
-                <span class="fa fa-picture-o fa-4x wow flip" data-wow-delay="0.7s"></span>
-            </div>
-            <section>
-                <h3>Interfaz Amigable</h3>
-                <p>Lo ponemos de tal forma que puedas seguir las instrucciones fácilmente, se acabaron los formularios aburridos y complicados!</p>
-            </section>
-        </article>
+        </section>
     </div>
-</section>
-</div>
+</g:else>
+
+
+
+
 
 
 
@@ -278,7 +280,7 @@
     <div class="container">
 
         <div class="sociales">
-            <a class="icon-fb" href="#"></a>
+            <a class="icon-fb" href="https://www.facebook.com/SemaforoWeb/" target="_blank"></a>
             <a class="icon-twitter" href="#"></a>
             <a class="icon-gp" href="#"></a>
         </div>
