@@ -40,13 +40,13 @@
         <label class="icon-menu" for="menu-bar"></label>
 
         <nav class="menu">
-            <a href="${createLink(uri: '/home')}">Inicio</a>
+            <a href="${createLink(uri: '/')}">Inicio</a>
             <a href="">¿Quienes Somos?</a>
             <a href="${createLink(uri: '/equipo')}">Equipo</a>
             <g:if test="${session.cliente}" >
                 <li><a href="#">${session.cliente.nombre}</a>
                     <ul>
-                        <li><a href="">Mi perfil</a></li>
+                        <li><a href="/Semaforo/cliente/perfilusuario">Mi perfil</a></li>
                         <li><a href="">Configuración</a></li>
                         <li><g:link controller="cliente" action ="logout">Salir</g:link></li>
                     </ul>

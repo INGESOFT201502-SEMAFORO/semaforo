@@ -13,7 +13,19 @@ class ClienteController {
         def clientes = Cliente.list()
         [clientes: clientes]
     }
-    
+
+    def perfilusuario ={
+
+
+    }
+
+    def vistainicioeditar ={
+
+
+    }
+
+
+
 
     def register(){
         if (session.cliente != null){
@@ -36,7 +48,7 @@ class ClienteController {
             session.cliente = cliente
             session.rol = "clienteApp"
             redirect action: inicio
-        }
+    }
 
     }
 

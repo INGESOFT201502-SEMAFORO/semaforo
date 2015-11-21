@@ -27,7 +27,7 @@
         <label class="icon-menu" for="menu-bar"></label>
 
         <nav class="menu">
-            <a href="${createLink(uri: '/home')}">Inicio</a>
+            <a href="${createLink(uri: '/')}">Inicio</a>
             <a href="${createLink(uri: '/whoWeAre')}">¿Quienes Somos?</a>
             <a href="${createLink(uri: '/equipo')}">Equipo</a>
             <g:if test="${session.cliente}" >
@@ -69,32 +69,33 @@
                     <br>
                     %{--<g:submitButton class="form-4" id="regButton" name="create"  value="${message(code: 'default.button.create.label', default: 'Create')}" />--}%
                     <g:submitButton class="form-4" id="regButton" name="create"  value="Registrarse" />
-                    <a class="btn btn-default" href="${createLink(uri: '/home')}">Volver</a>
+                    <a class="btn btn-default" href="${createLink(uri: '/')}">Volver</a>
                 </g:form>
         </div>
 
 
     </g:else>
-    <g:hasErrors bean="${clienteInstance}">
+    <!--<g:hasErrors bean="${clienteInstance}">
         <ul class="errors" role="alert">
             <g:eachError bean="${clienteInstance}" var="error">
                 <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
             </g:eachError>
         </ul>
-    </g:hasErrors>
+    </g:hasErrors>-->
 </div>
 
-<footer>
+
     <br><br><br><br>
-    <div class="container">
-        <p class="copy">Semáforo &copy; 2015</p>
-        <div class="sociales">
-            <a class="icon-fb" href="#"></a>
-            <a class="icon-twitter" href="#"></a>
-            <a class="icon-gp" href="#"></a>
-        </div>
+<div class="container" id="foot">
+    <h6 class="copy">Semáforo &copy; 2015</h6>
+    <div class="sociales">
+        <a class="icon-fb" href="#"></a>
+        <a class="icon-twitter" href="#"></a>
+        <a class="icon-gp" href="#"></a>
     </div>
-</footer>
+    <br><br><br>
+</div>
+
 <script>
     <g:hasErrors bean="${clienteInstance}">
     <g:eachError bean="${clienteInstance}" var="error">

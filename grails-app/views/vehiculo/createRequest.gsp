@@ -9,7 +9,7 @@
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-
+		<asset:stylesheet src="vehReqView.css"/>
 		<asset:stylesheet src="bootstrap.min.css"/>
 		<asset:stylesheet src="style3.css"/>
 		<asset:stylesheet src="fontello.css"/>
@@ -17,6 +17,8 @@
 		<asset:stylesheet src="columnas.css"/>
 		<asset:stylesheet src="default.css"/>
 		<asset:stylesheet src="font-awesome.min.css"/>
+        <asset:stylesheet src="bootstrap-select.css"/>
+        <asset:javascript src="bootstrap-select.js"/>
         <g:set var="entityName" value="${message(code: 'vehiculo.label', default: 'Vehiculo')}" />
         <title><g:message code="default.edit.label" args="[entityName]" /></title>
     </head>
@@ -31,7 +33,7 @@
 			<label class="icon-menu" for="menu-bar"></label>
 
 			<nav class="menu">
-				<a href="${createLink(uri: '/home')}">Inicio</a>
+				<a href="${createLink(uri: '/')}">Inicio</a>
 				<a href="${createLink(uri: '/whoWeAre')}">¿Quienes Somos?</a>
 				<a href="${createLink(uri: '/equipo')}">Equipo</a>
 				<g:if test="${session.cliente}" >
@@ -60,43 +62,46 @@
 		<p>Llena el siguiente formulario de forma fácil y rápida</p>
 		<br><br><br>
 	</section>
+		<div class="container" id="llenado">
+			<table>
+				<tr>
+					<th>Tipo de vehículo</th>
+					<td id="tipo_vehiculo"></td>
+				</tr>
+				<tr id="tr_marca" class="hidden">
+					<th>Marca</th>
+					<td id="marca"></td>
+				</tr>
+				<tr id="tr_referencia1" class="hidden">
+					<th>Referencia 1</th>
+					<td id="referencia1"></td>
+				</tr>
+				<tr id="tr_referencia2" class="hidden">
+					<th>Referencia 2</th>
+					<td id="referencia2"></td>
+				</tr>
+				<tr id="tr_referencia3" class="hidden">
+					<th>Referencia 3</th>
+					<td id="referencia3"></td>
+				</tr>
+				<tr id="tr_modelo" class="hidden">
+					<th>Modelo</th>
+					<td id="modelo"></td>
+				</tr>
+				<tr id="tr_valor" class="hidden">
+					<th>Valor asegurado</th>
+					<td id="valor"></td>
+				</tr>
+			</table>
+		</div>
 
-    	<table
-    		<tr>
-    			<th>Tipo de vehículo</th>
-    			<td id="tipo_vehiculo"></td>
-    		</tr>
-    		<tr id="tr_marca" class="hidden">
-    			<th>Marca</th>
-    			<td id="marca"></td>
-    		</tr>
-    		<tr id="tr_referencia1" class="hidden">
-    			<th>Referencia 1</th>
-    			<td id="referencia1"></td>
-    		</tr>
-    		<tr id="tr_referencia2" class="hidden">
-    			<th>Referencia 2</th>
-    			<td id="referencia2"></td>
-    		</tr>
-			<tr id="tr_referencia3" class="hidden">
-				<th>Referencia 3</th>
-				<td id="referencia3"></td>
-			</tr>
-			<tr id="tr_modelo" class="hidden">
-				<th>Modelo</th>
-				<td id="modelo"></td>
-			</tr>
-			<tr id="tr_valor" class="hidden">
-				<th>Valor asegurado</th>
-				<td id="valor"></td>
-			</tr>
-    	</table>
     	<br><br>
     	<div id="seguros" class="hidden"></div>
 
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js"></script>
     	<script id="seguros-template" type="text/x-handlebars-template">
     	{{#if this.length}}
+		<div class="container">
 			<table border=1 class="table">
 				<tr>
 					<th>Características</th>
@@ -205,8 +210,13 @@
 					{{/each}}
 				</tr>
 			</table>
+
+
+		</div>
+
 		{{else}}
-		No hay seguros disponibles
+		<div class="container">No hay seguros disponibles para este vehículo</div>
+
 		{{/if}}
 		</script>
     	<script>
@@ -227,7 +237,7 @@
 		$.ajax({
 			url : '${request.contextPath}/vehiculo/getTipoVehiculo',
 			success : function(datos){
-				var $tipo_vehiculo = $('<select>');
+				var $tipo_vehiculo = $('<select class="form-control">');
 				$tipo_vehiculo.append($('<option value="-1">').text('Seleccione tipo de vehículo'));
 
 				datos.forEach(function(tipo){
@@ -245,7 +255,7 @@
 						url : '${request.contextPath}/vehiculo/getMarcas?tipo='+ $tipo_vehiculo.val(),
 						success : function(datos){
 							$("#tr_marca").removeClass();
-							var $marca = $('<select>');
+							var $marca = $('<select class="form-control">');
 							$marca.append($('<option value="-1">').text('Seleccione una marca'));
 
 							datos.forEach(function(tipo){
@@ -262,7 +272,7 @@
 									url : '${request.contextPath}/vehiculo/getReferencia1?marca='+ $marca.val(),
 									success : function(datos){
 										$("#tr_referencia1").removeClass();
-										var $referencia1 = $('<select>');
+										var $referencia1 = $('<select class="form-control">');
 										$referencia1.append($('<option value="-1">').text('Seleccione una referencia'));
 
 										datos.forEach(function(tipo){
@@ -278,7 +288,7 @@
 												url : '${request.contextPath}/vehiculo/getReferencia2?marca='+ $marca.val() + '&referencia1='+ $referencia1.val(),
 												success : function(datos){
 													$("#tr_referencia2").removeClass();
-													var $referencia2 = $('<select>');
+													var $referencia2 = $('<select class="form-control">');
 													$referencia2.append($('<option value="-1">').text('Seleccione una referencia'));
 
 													datos.forEach(function(tipo){
@@ -293,7 +303,7 @@
 															url : '${request.contextPath}/vehiculo/getReferencia3?marca='+ $marca.val() + '&referencia1='+ $referencia1.val() +'&referencia2='+ $referencia2.val(),
 															success : function(datos){
 																$("#tr_referencia3").removeClass();
-																var $referencia3 = $('<select>');
+																var $referencia3 = $('<select class="form-control">');
 																$referencia3.append($('<option value="-1">').text('Seleccione una referencia'));
 
 																datos.forEach(function(row){
@@ -307,7 +317,7 @@
 																		url : '${request.contextPath}/vehiculo/getModelos?id='+ $referencia3.val(),
 																		success : function(datos){
 																			$("#tr_modelo").removeClass();
-																			var $modelo = $('<select>');
+																			var $modelo = $('<select class="form-control">');
 																			$modelo.append($('<option value="-1">').text('Seleccione el modelo de su vehículo'));
 
 																			datos.forEach(function(row){
