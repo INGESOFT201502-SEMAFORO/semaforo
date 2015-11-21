@@ -139,7 +139,7 @@
                     <div class="ch-item ch-img-3" id="circle3">
                         <div class="ch-info">
                             <h3>Taller</h3>
-                            <p>Haz crecer tu negocio con más clientes!<a href="http://drbl.in/eNXY">Regístrate</a></p>
+                            <p>Haz crecer tu negocio con más clientes!<a ref="">Próximamente</a></p>
                         </div>
                     </div>
                 </li>
