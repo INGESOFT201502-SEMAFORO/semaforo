@@ -17,6 +17,8 @@
 		<asset:stylesheet src="columnas.css"/>
 		<asset:stylesheet src="default.css"/>
 		<asset:stylesheet src="font-awesome.min.css"/>
+        <asset:stylesheet src="bootstrap-select.css"/>
+        <asset:javascript src="bootstrap-select.js"/>
         <g:set var="entityName" value="${message(code: 'vehiculo.label', default: 'Vehiculo')}" />
         <title><g:message code="default.edit.label" args="[entityName]" /></title>
     </head>
@@ -234,7 +236,7 @@
 		$.ajax({
 			url : '${request.contextPath}/vehiculo/getTipoVehiculo',
 			success : function(datos){
-				var $tipo_vehiculo = $('<select>');
+				var $tipo_vehiculo = $('<select class="form-control">');
 				$tipo_vehiculo.append($('<option value="-1">').text('Seleccione tipo de vehículo'));
 
 				datos.forEach(function(tipo){
@@ -252,7 +254,7 @@
 						url : '${request.contextPath}/vehiculo/getMarcas?tipo='+ $tipo_vehiculo.val(),
 						success : function(datos){
 							$("#tr_marca").removeClass();
-							var $marca = $('<select>');
+							var $marca = $('<select class="form-control">');
 							$marca.append($('<option value="-1">').text('Seleccione una marca'));
 
 							datos.forEach(function(tipo){
@@ -269,7 +271,7 @@
 									url : '${request.contextPath}/vehiculo/getReferencia1?marca='+ $marca.val(),
 									success : function(datos){
 										$("#tr_referencia1").removeClass();
-										var $referencia1 = $('<select>');
+										var $referencia1 = $('<select class="form-control">');
 										$referencia1.append($('<option value="-1">').text('Seleccione una referencia'));
 
 										datos.forEach(function(tipo){
@@ -285,7 +287,7 @@
 												url : '${request.contextPath}/vehiculo/getReferencia2?marca='+ $marca.val() + '&referencia1='+ $referencia1.val(),
 												success : function(datos){
 													$("#tr_referencia2").removeClass();
-													var $referencia2 = $('<select>');
+													var $referencia2 = $('<select class="form-control">');
 													$referencia2.append($('<option value="-1">').text('Seleccione una referencia'));
 
 													datos.forEach(function(tipo){
@@ -300,7 +302,7 @@
 															url : '${request.contextPath}/vehiculo/getReferencia3?marca='+ $marca.val() + '&referencia1='+ $referencia1.val() +'&referencia2='+ $referencia2.val(),
 															success : function(datos){
 																$("#tr_referencia3").removeClass();
-																var $referencia3 = $('<select>');
+																var $referencia3 = $('<select class="form-control">');
 																$referencia3.append($('<option value="-1">').text('Seleccione una referencia'));
 
 																datos.forEach(function(row){
@@ -314,7 +316,7 @@
 																		url : '${request.contextPath}/vehiculo/getModelos?id='+ $referencia3.val(),
 																		success : function(datos){
 																			$("#tr_modelo").removeClass();
-																			var $modelo = $('<select>');
+																			var $modelo = $('<select class="form-control">');
 																			$modelo.append($('<option value="-1">').text('Seleccione el modelo de su vehículo'));
 
 																			datos.forEach(function(row){

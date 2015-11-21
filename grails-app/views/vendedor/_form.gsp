@@ -84,7 +84,7 @@
 		<g:message code="vendedor.empresa.label" default="Empresa" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="empresa" name="empresa.id" from="${semaforo.Empresa.list()}" optionKey="id" required="" value="${vendedorInstance?.empresa?.id}" class="many-to-one"/>
+	<g:select id="empresa" name="empresa.id" from="${semaforo.Empresa.list()}" optionKey="id" required="" value="${vendedorInstance?.empresa?.id}" class="many-to-one selectpicker form-control"/>
 
 </div>
 </div>

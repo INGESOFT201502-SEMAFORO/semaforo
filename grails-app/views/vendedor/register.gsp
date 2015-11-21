@@ -9,6 +9,10 @@
     <asset:stylesheet src="estilos.css"/>
     <asset:stylesheet src="loginStyle.css"/>
     <asset:stylesheet src="fontello.css"/>
+    <asset:stylesheet src="bootstrap-select.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <asset:javascript src="bootstrap-select.js"/>
+    <asset:javascript src="bootstrap.min.js"/>
     <g:set var="entityName" value="${message(code: 'vendedor.label', default: 'Vendedor')}"/>
     <title>Regístrate en Semáforo como Vendedor</title>
 </head>
@@ -49,6 +53,7 @@
     </g:if>
     <g:else>
         <br><br><br><br><br><br>
+
         <div class="container">
             <h3 class="form-4">Formulario Creación cuenta de Vendedor</h3>
             <g:form url="[resource:vendedorInstance, action:'registerLogin']" class="form-4">
