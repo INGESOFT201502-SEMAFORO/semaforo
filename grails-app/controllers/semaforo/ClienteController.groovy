@@ -26,10 +26,13 @@ class ClienteController {
     def login(){
         def cliente = Cliente.findByCorreoAndPassword(params.correo, params.password)
         if (cliente == null){
-            flash.message = "usuario no registrado"
-            redirect action: inicio
+            request.message = "usuario no registrado"
+            //flash.message = "usuario no registrado"
+            //redirect action: inicio
+            render view: '../ingresar'
+
         }else{
-            flash.message = "inicio de sesion correcto ${cliente.correo}"
+            request.message = "inicio de sesion correcto ${cliente.correo}"
             session.cliente = cliente
             session.rol = "clienteApp"
             redirect action: inicio

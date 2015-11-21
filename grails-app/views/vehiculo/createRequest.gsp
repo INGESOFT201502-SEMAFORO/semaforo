@@ -61,7 +61,7 @@
 		<br><br><br>
 	</section>
 
-    	<table>
+    	<table
     		<tr>
     			<th>Tipo de vehículo</th>
     			<td id="tipo_vehiculo"></td>
@@ -200,7 +200,8 @@
 				<tr>
 					<td></td>
 					{{#each this}}
-					<td><button class="btn btn-primary" onclick="ComprarSeguro({{id}})">Comprar</button></td>
+					<!-- <td><button class="btn btn-primary" onclick="ComprarSeguro({{id}})">Comprar</button></td> -->
+					<td><a class="btn btn-success" href="${request.contextPath}/vehiculo/crearVehiculo?segId={{id}}">Comprar</a></td>
 					{{/each}}
 				</tr>
 			</table>

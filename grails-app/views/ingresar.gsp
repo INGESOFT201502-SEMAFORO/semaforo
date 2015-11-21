@@ -65,9 +65,16 @@
 
     <h6>Ingresar</h6>
 
+    <g:if test="${request.message}">
+        <div class="alert alert-danger" role="alert">
+            <div class="message" role="status">${request.message}</div>
+        </div>
+    </g:if>
+
     <p>
         <input type="text" name="correo" placeholder="Usuario o Email" required>
     </p>
+
     <p>
 
         <input type="password" name='password' placeholder="Contraseña" required>
@@ -81,6 +88,7 @@
 </g:form>
 
 
+
     <br><br><br><br>
     <div class="container" id="foot">
         <h6 class="copy">Semáforo &copy; 2015</h6>
@@ -90,7 +98,6 @@
             <a class="icon-gp" href="#"></a>
         </div>
     </div>
-
 
 </body>
 </html>

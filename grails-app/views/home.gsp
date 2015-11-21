@@ -110,6 +110,14 @@
 
 <g:if test="${session.rol == "clienteApp"}">
 <!--SENTENCIAS PARA CUANDO EL CLIENTE SE REGISTRA-->
+    <div class="container">
+        <br><br>
+        <g:link class="btn btn-success col-md-offset-5" role="button" controller="vehiculo" action="createRequest">Cotize su Poliza ahora! </g:link>
+        <br><br>
+    </div>
+
+
+
 
 </g:if>
 <g:else>
