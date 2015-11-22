@@ -19,6 +19,7 @@
 		<asset:stylesheet src="font-awesome.min.css"/>
         <asset:stylesheet src="bootstrap-select.css"/>
         <asset:javascript src="bootstrap-select.js"/>
+		<asset:stylesheet src="tablas.css"/>
         <g:set var="entityName" value="${message(code: 'vehiculo.label', default: 'Vehiculo')}" />
         <title><g:message code="default.edit.label" args="[entityName]" /></title>
     </head>
@@ -102,7 +103,7 @@
     	<script id="seguros-template" type="text/x-handlebars-template">
     	{{#if this.length}}
 		<div class="container">
-			<table border=1 class="table">
+			<table border=2 class="table" id="cotizacion">
 				<tr>
 					<th>Características</th>
 					{{#each this}}
@@ -206,7 +207,7 @@
 					<td></td>
 					{{#each this}}
 					<!-- <td><button class="btn btn-primary" onclick="ComprarSeguro({{id}})">Comprar</button></td> -->
-					<td><a class="btn btn-success" href="${request.contextPath}/vehiculo/crearVehiculo?segId={{id}}">Comprar</a></td>
+					<td><a class="btn btn-success" id="botonc" href="${request.contextPath}/vehiculo/crearVehiculo?segId={{id}}">Comprar</a></td>
 					{{/each}}
 				</tr>
 			</table>

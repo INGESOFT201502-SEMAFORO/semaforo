@@ -66,8 +66,8 @@
     <h6>Ingresar</h6>
 
     <g:if test="${request.message}">
-        <div class="alert alert-danger" role="alert">
-            <div class="message" role="status">${request.message}</div>
+        <div class="alert alert-danger" role="alert" id="nonReg">
+            <div class="message" align="center" role="status">${request.message}</div>
         </div>
     </g:if>
 
