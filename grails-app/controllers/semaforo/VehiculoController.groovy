@@ -109,8 +109,32 @@ class VehiculoController {
         respond new Vehiculo(params)
     }
 
-    def mostrarResumen(vehiculoInstance){
+    def mostrarResumen(Vehiculo vehiculoInstance){
         respond vehiculoInstance
+    }
+
+    @Transactional
+    def saveApp(Vehiculo vehiculoInstance) {
+        if (vehiculoInstance == null) {
+            notFound()
+            return
+        }
+
+        if (vehiculoInstance.hasErrors()) {
+            respond vehiculoInstance.errors, view:'create'
+            return
+        }
+
+        vehiculoInstance.save flush:true
+
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.created.message', args: [message(code: 'vehiculo.label', default: 'Vehiculo'), vehiculoInstance.id])
+                //redirect vehiculoInstance
+                redirect action: "mostrarResumen", id: vehiculoInstance.id
+            }
+            '*' { respond vehiculoInstance, [status: CREATED] }
+        }
     }
 
     /*******************scaffold****************************/

@@ -60,7 +60,7 @@
 
 <br><br><br><br>
 
-<g:form url="[resource:vehiculoInstance, action:'save']" >
+<g:form url="[resource:vehiculoInstance, action:'saveApp']" >
     <fieldset class="form">
         <div class="fieldcontain ${hasErrors(bean: vehiculoInstance, field: 'placa', 'error')} required">
             <label for="placa">
