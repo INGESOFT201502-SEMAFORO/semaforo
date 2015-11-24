@@ -75,7 +75,12 @@
                 </li>
             </g:elseif>
             <g:else>
-                <a href="${createLink(uri: '/ingresar')}">Login</a>
+                <li><a href="#">Login</a>
+                <ul>
+                    <li><a href="${createLink(uri: '/ingresar')}">Como Ciente</a></li>
+                    <li><a href="${createLink(uri: '/ingresarvendedor')}">Como Vendedor</a></li>
+                </ul>
+                </li>
             </g:else>
         </nav>
 

@@ -62,9 +62,9 @@
     </div>
 </header>
 <br><br><br><br><br><br>
-<g:form controller="cliente" action="login" class="form-4">
+<g:form controller="vendedor" action="login" class="form-4">
 
-    <h6>Ingresar</h6>
+    <h6>Ingresar como Vendedor</h6>
 
     <g:if test="${request.message}">
         <div class="alert alert-danger" role="alert" id="nonReg">
