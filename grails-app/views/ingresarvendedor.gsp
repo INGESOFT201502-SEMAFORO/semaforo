@@ -1,9 +1,10 @@
 <%--
   Created by IntelliJ IDEA.
-  User: SAMUELLEONARDO
-  Date: 6/11/2015
-  Time: 2:29 AM
+  User: David Alexander
+  Date: 23/11/2015
+  Time: 10:26 PM
 --%>
+
 
 <!DOCTYPE html>
 <!-- saved from url=(0043)http://getbootstrap.com/examples/carousel/# -->
@@ -61,9 +62,9 @@
     </div>
 </header>
 <br><br><br><br><br><br>
-<g:form controller="cliente" action="login" class="form-4">
+<g:form controller="vendedor" action="login" class="form-4">
 
-    <h6>Ingresar como Cliente</h6>
+    <h6>Ingresar como Vendedor</h6>
 
     <g:if test="${request.message}">
         <div class="alert alert-danger" role="alert" id="nonReg">
@@ -89,15 +90,15 @@
 
 
 
-    <br><br><br><br>
-    <div class="container" id="foot">
-        <h6 class="copy">Semáforo &copy; 2015</h6>
-        <div class="sociales">
-            <a class="icon-fb" href="#"></a>
-            <a class="icon-twitter" href="#"></a>
-            <a class="icon-gp" href="#"></a>
-        </div>
+<br><br><br><br>
+<div class="container" id="foot">
+    <h6 class="copy">Semáforo &copy; 2015</h6>
+    <div class="sociales">
+        <a class="icon-fb" href="#"></a>
+        <a class="icon-twitter" href="#"></a>
+        <a class="icon-gp" href="#"></a>
     </div>
+</div>
 
 </body>
 </html>
