@@ -3,15 +3,18 @@ import groovy.json.*
 
 class Cliente extends Usuario{
 
-	String tarjetaCredito
+	String direccion
+	String telefono
 	
 	static hasMany = [citas:Cita, vehiculos: Vehiculo]
 
     static constraints = { 
-		tarjetaCredito nullable:false, blank:false, creditCard: true, unique: true
+		direccion nullable:false, blank:false, unique: true
+		telefono nullable: false, blank: false, unique: false
     }
 	
 	String toString() {
-		return "TarjetaCredito: " + tarjetaCredito
+		return "Direccion: " + direccion
+		return "Telefono:  " + telefono
 	}
 }
