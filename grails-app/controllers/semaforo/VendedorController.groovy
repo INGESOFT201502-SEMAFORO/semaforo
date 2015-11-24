@@ -32,7 +32,7 @@ class VendedorController {
             flash.message = "Inicio de sesión correcto ${vendedor.correo}"
             session.vendedor = vendedor
             session.rol = "vendedorApp"
-            redirect action: inicio
+            render view: "../home"
         }
     }
 

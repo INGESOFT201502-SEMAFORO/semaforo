@@ -1,3 +1,5 @@
+import semaforo.Vendedor
+
 import java.io.BufferedReader
 import java.io.FileReader
 import semaforo.Guia
@@ -121,6 +123,16 @@ class BootStrap {
 				empresa : empresa3,
 				valorModelo : valorModelo
 		).save(failOnError : true)
+
+        def vendedor1 = new Vendedor(
+                nombre: "Fabio García",
+                usuario: "fagarcia",
+                correo: "fagarcia@ashleymadison.com",
+                password: "A0123456789",
+                edad: 34,
+                cedula: 1030720860,
+                empresa: empresa2
+        ).save(failOnError: true)
 
 
 	}
