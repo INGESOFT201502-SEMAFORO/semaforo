@@ -40,7 +40,7 @@
 		<g:message code="vendedor.password.label" default="Password" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="password" pattern="${vendedorInstance.constraints.password.matches}" required="" value="${vendedorInstance?.password}"/>
+	<g:field type="password" name="password" pattern="${vendedorInstance.constraints.password.matches}" required="" value="${vendedorInstance?.password}"/>
 
 </div>
 </div>
@@ -51,7 +51,7 @@
 		<g:message code="vendedor.edad.label" default="Edad" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="edad" type="number" min="18" value="${vendedorInstance.edad}" required=""/>
+	<g:field name="edad" type="number" min="18" required=""/>
 
 </div>
 </div>
@@ -62,7 +62,7 @@
 		<g:message code="vendedor.cedula.label" default="Cedula" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="cedula" type="number" value="${vendedorInstance.cedula}" required=""/>
+	<g:field name="cedula" type="number" required=""/>
 
 </div>
 </div>

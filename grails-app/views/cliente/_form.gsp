@@ -41,7 +41,7 @@
 			<g:message code="cliente.password.label" default="Password" />
 			<span class="required-indicator">*</span>
 		</label>
-		<g:textField class="form-control" name="password" required="" value="${clienteInstance?.password}"/>
+		<g:field type="password" class="form-control" name="password" required="" value="${clienteInstance?.password}"/>
 		<span class="error password"></span>
 
 	</div>
@@ -53,7 +53,7 @@
 			<g:message code="cliente.edad.label" default="Edad" />
 			<span class="required-indicator">*</span>
 		</label>
-		<g:textField class="form-control" name="edad" type="number" min="18" value="${clienteInstance.edad}" required=""/>
+		<g:textField class="form-control" name="edad" type="number" min="18" required=""/>
 		<span class="error edad"></span>
 	</div>
 </div>
@@ -64,7 +64,7 @@
 			<g:message code="cliente.cedula.label" default="Cedula" />
 			<span class="required-indicator">*</span>
 		</label>
-		<g:textField class="form-control" name="cedula" type="number" value="${clienteInstance.cedula}" required=""/>
+		<g:textField class="form-control" name="cedula" type="number" required=""/>
 		<span class="error cedula"></span>
 
 	</div>

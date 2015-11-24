@@ -47,7 +47,8 @@ class ClienteController {
             request.message = "inicio de sesion correcto ${cliente.correo}"
             session.cliente = cliente
             session.rol = "clienteApp"
-            redirect action: inicio
+            //redirect action: inicio
+            render view: '../home'
     }
 
     }

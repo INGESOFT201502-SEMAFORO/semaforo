@@ -75,7 +75,7 @@
             <g:if test="${vehiculoInstance?.seguro?.valor}">
                 <li class="fieldcontain">
                     <span class="property-label">Valor: </span>
-                    <span class="property-value" aria-labelledby="valor-label">${vehiculoInstance?.seguro?.valor}</span>
+                    <span class="property-value" aria-labelledby="valor-label">${vehiculoInstance?.seguro?.valor.toLong()}</span>
                 </li>
             </g:if>
 
