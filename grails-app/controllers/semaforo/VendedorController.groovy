@@ -10,6 +10,8 @@ class VendedorController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    def perfilvendedor = {}
+
     def inicio = {
         def vendedores = Vendedor.list()
         [vendedores: vendedores]
