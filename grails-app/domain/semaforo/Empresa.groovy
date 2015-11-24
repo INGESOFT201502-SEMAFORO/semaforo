@@ -14,6 +14,6 @@ class Empresa {
 		direccion  maxSize: 50, blank: false, nullable: false
     }
 	String toString() {
-		return "Nombre: " + nombre +", Telefono: " + telefono +", Direción: " + direccion 
+		return nombre
 	}
 }
