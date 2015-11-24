@@ -65,7 +65,15 @@
                     </ul>
                 </li>
             </g:if>
-
+            <g:elseif test="${session.vendedor}">
+                <li><a href="#">${session.vendedor.nombre}</a>
+                    <ul>
+                        <li><a href="">Mi Perfil</a></li>
+                        <li><a href="">Configuración</a></li>
+                        <li><g:link controller="vendedor" action="logout">Salir</g:link></li>
+                    </ul>
+                </li>
+            </g:elseif>
             <g:else>
                 <a href="${createLink(uri: '/ingresar')}">Login</a>
             </g:else>
