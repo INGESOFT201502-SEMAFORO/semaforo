@@ -131,6 +131,53 @@
 
 
 </g:if>
+<g:elseif test="${session.rol == "vendedorApp"}">
+    <!--SENTENCIAS PARA CUANDO EL VENDEDOR SE REGISTRA-->
+
+    <style type="text/css">
+    body {
+        background: url("https://bullbearanalytics.com/wp-content/uploads/2014/09/bba-city-background-optimized.jpg");
+        background-repeat:no-repeat;
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        -o-background-size:cover;
+        background-size:cover;
+        background-position:center;
+        background-attachment: fixed;
+    }
+    </style>
+    <br><br><br><br>
+    <section id="mostrar">
+        <h2>Ofrece tus servicios</h2>
+        <p>Puedes subir tu portafolio de servicios y vender tus seguros!</p>
+        <p>Revisa y gestiona tus citas con clientes!</p>
+    </section>
+
+    <div class="container">
+
+        <section>
+
+            <ul class="ch-grid">
+                <li>
+                    <div class="ch-item ch-img-5" id="circle5">
+                        <div class="ch-info">
+                            <h3>Servicios</h3>
+                            <p>Carga tu archivo de servicios<g:link controller="seguro" action ="cargarDatos">Cargar</g:link></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ch-item ch-img-6" id="circle6">
+                        <div class="ch-info">
+                            <h3>Citas</h3>
+                            <p>Revisa y gestiona tus Citas<g:link controller="seguro" action ="cargarDatos">Consultar</g:link></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+</g:elseif>
 <g:else>
 <!--SI NINGUN ROL ESTA LOG IN-->
     <div class="slider"> <!--BANNER HOME-->
@@ -271,6 +318,15 @@
             </div>
         </section>
     </div>
+
+    <div class="container">
+        <section id="mostrar1">
+            <h2>¿No tienes Vehículo aún?...</h2>
+            <p>Puedes consultar la página "tucarro.com"...  Cotiza y compra tu vehículo para que lo puedas registrar y así
+            puedas disfrutar de nuestros servicios...</p>
+            <a href="http://www.tucarro.com.co/" target="_blank">Quiero mi Vehículo!!</a>
+        </section>
+    </div>
 </g:else>
 
 
@@ -279,14 +335,7 @@
 
 
 
-<div class="container">
-    <section id="mostrar1">
-        <h2>¿No tienes Vehículo aún?...</h2>
-        <p>Puedes consultar la página "tucarro.com"...  Cotiza y compra tu vehículo para que lo puedas registrar y así
-            puedas disfrutar de nuestros servicios...</p>
-        <a href="http://www.tucarro.com.co/" target="_blank">Quiero mi Vehículo!!</a>
-    </section>
-</div>
+
 
 
 
