@@ -70,13 +70,3 @@
 	</div>
 </div>
 
-<div class="form-group">
-	<div class="fieldcontain ${hasErrors(bean: clienteInstance, field: 'tarjetaCredito', 'error')} required">
-		<label for="tarjetaCredito">
-			<g:message code="cliente.tarjetaCredito.label" default="Tarjeta Credito" />
-			<span class="required-indicator">*</span>
-		</label>
-		<g:textField class="form-control" name="tarjetaCredito" maxlength="50" required="" value="${clienteInstance?.tarjetaCredito}"/>
-		<span class="error tarjetaCredito"></span>
-	</div>
-</div>
