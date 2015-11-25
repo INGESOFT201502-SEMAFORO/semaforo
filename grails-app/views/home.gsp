@@ -173,7 +173,7 @@
                     <div class="ch-item ch-img-6" id="circle6">
                         <div class="ch-info">
                             <h3>Citas</h3>
-                            <p>Revisa y gestiona tus Citas<g:link controller="seguro" action ="">Consultar</g:link></p>
+                            <p>Revisa y gestiona tus Citas<g:link controller="cita" action ="showApp" id="1">Consultar</g:link></p>
                         </div>
                     </div>
                 </li>

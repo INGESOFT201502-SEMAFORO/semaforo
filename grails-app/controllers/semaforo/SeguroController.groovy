@@ -43,6 +43,7 @@ class SeguroController {
                 empresa.save(flush : true)
             }
         }
-        render "Datos cargados ;)"
+        //render "Datos cargados ;)"
+        redirect uri: "/home"
     }
 }

@@ -36,7 +36,8 @@ class VendedorController {
             flash.message = "Inicio de sesión correcto ${vendedor.correo}"
             session.vendedor = vendedor
             session.rol = "vendedorApp"
-            render view: "../home"
+            //render view: "../home"
+            redirect uri: "/home"
         }
     }
 
@@ -55,7 +56,8 @@ class VendedorController {
         vendedorInstance.save flush: true
         session.vendedor = vendedorInstance
         session.rol = "vendedorApp"
-        redirect action: inicio
+        //redirect action: inicio
+        redirect uri: "/home"
     }
 
     def logout() {

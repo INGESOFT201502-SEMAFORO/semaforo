@@ -48,7 +48,8 @@ class ClienteController {
             session.cliente = cliente
             session.rol = "clienteApp"
             //redirect action: inicio
-            render view: '../home'
+            redirect uri: "/home"
+
     }
 
     }
@@ -70,7 +71,8 @@ class ClienteController {
         session.cliente = clienteInstance
         session.rol = "clienteApp"
         //redirect (action: "show", id: clienteInstance.id)
-        redirect action: inicio
+        //redirect action: inicio
+        redirect uri: "/home"
     }
 
     def logout(){
