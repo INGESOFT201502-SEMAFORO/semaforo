@@ -77,15 +77,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${clienteInstance?.tarjetaCredito}">
-				<li class="fieldcontain">
-					<span id="tarjetaCredito-label" class="property-label"><g:message code="cliente.tarjetaCredito.label" default="Tarjeta Credito" /></span>
-					
-						<span class="property-value" aria-labelledby="tarjetaCredito-label"><g:fieldValue bean="${clienteInstance}" field="tarjetaCredito"/></span>
-					
-				</li>
-				</g:if>
-			
 			</ol>
 			<g:form url="[resource:clienteInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
