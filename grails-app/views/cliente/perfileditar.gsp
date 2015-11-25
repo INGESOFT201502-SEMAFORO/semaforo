@@ -4,70 +4,65 @@
   Date: 21/11/2015
   Time: 09:35 AM
 --%>
-
+<%@ page import="semaforo.Cliente" %>
 <html lang="en">
 <head>
     <title>Semáforo - Editar Perfil</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta charset="UTF-8">
-    <link rel="icon" href="http://unal.edu.co/fileadmin/templates/favicon.ico">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-    <asset:stylesheet src="bootstrap.min.css"/>
-    <asset:stylesheet src="demo.css"/>
-    <asset:stylesheet src="common.css"/>
-    <asset:stylesheet src="style2.css"/>
-    <asset:stylesheet src="fontello.css"/>
-    <asset:stylesheet src="estilos.css"/>
-    <asset:stylesheet src="columnas.css"/>
-    <asset:stylesheet src="responsiveslides.css"/>
-    <asset:javascript src="responsiveslides.js"/>
-    <asset:stylesheet src="animate.css"/>
-    <asset:javascript src="wow.min.js"/>
-    <asset:stylesheet src="default.css"/>
-    <asset:stylesheet src="font-awesome.min.css"/>
+<meta charset="UTF-8">
+<link rel="icon" href="http://unal.edu.co/fileadmin/templates/favicon.ico">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'><asset:stylesheet src="vehReqView.css"/>
+<asset:stylesheet src="bootstrap.min.css"/>
+<asset:stylesheet src="demo.css"/>
+<asset:stylesheet src="common.css"/>
+<asset:stylesheet src="style2.css"/>
+<asset:stylesheet src="fontello.css"/>
+<asset:stylesheet src="estilos.css"/>
+<asset:stylesheet src="columnas.css"/>
+<asset:stylesheet src="responsiveslides.css"/>
+<asset:javascript src="responsiveslides.js"/>
+<asset:stylesheet src="animate.css"/>
+<asset:javascript src="wow.min.js"/>
+<asset:stylesheet src="default.css"/>
+<asset:stylesheet src="font-awesome.min.css"/>
 
-    <!--[if IE]>
-            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-            <![endif]-->
-    <title>Bootstrap user profile template</title>
-    <!-- BOOTSTRAP STYLE SHEET -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- FONT-AWESOME STYLE SHEET FOR BEAUTIFUL ICONS -->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
-    <!-- CUSTOM STYLE CSS -->
-    <style type="text/css">
-    .btn-social {
-        color: white;
-        opacity: 0.8;
-    }
-    .btn-social:hover {
-        color: white;
-        opacity: 1;
-        text-decoration: none;
-    }
+<!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+<title>Bootstrap user profile template</title>
+<!-- BOOTSTRAP STYLE SHEET -->
+<link href="assets/css/bootstrap.css" rel="stylesheet" />
+<!-- FONT-AWESOME STYLE SHEET FOR BEAUTIFUL ICONS -->
+<link href="assets/css/font-awesome.css" rel="stylesheet" />
+<!-- CUSTOM STYLE CSS -->
+<style type="text/css">
+.btn-social {
+    color: white;
+    opacity: 0.8;
+}
+.btn-social:hover {
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+}
 
-    </style>
-    <script>
-        $(document).ready(function(){
-            $("#slider-home").responsiveSlides({
-                speed:300,
-                nav: true,
-                namespace: 'slid-btns',
-                titleAnimation: 'bounceIn'
-            });
+</style>
+<script>
+    $(document).ready(function(){
+        $("#slider-home").responsiveSlides({
+            speed:300,
+            nav: true,
+            namespace: 'slid-btns',
+            titleAnimation: 'bounceIn'
         });
-    </script>
+    });
+</script>
 </head>
-
-
-<body>
 <header>
-
-
     <div class="container">
         <h1 class="icon-semaforo">Semáforo</h1><!-- BARRA DE MENU (CONSOLIDADA) -->
         <input type="checkbox" id="menu-bar">
@@ -101,58 +96,36 @@
 <!-- NAVBAR CODE END -->
 
 
-<div class="container">
-    <section style="padding-bottom: 50px; padding-top: 50px;">
-        <div class="row">
-            <div class="col-md-4">
-                <img src="assets/img/250x250.png" class="img-rounded img-responsive" />
-                <br />
-                <br />
-                <label>Usuario Registrado</label>
-                <input type="text" class="form-control" placeholder="//">
-                <label>Nombre</label>
-                <input type="text" class="form-control" placeholder="//">
-                <label>Email Registrado</label>
-                <input type="text" class="form-control" placeholder="//">
-                <br>
-                <a href="#" class="btn btn-success">Update Details</a>
-                <br /><br/>
-            </div>
-            <div class="col-md-8">
-                <div class="alert alert-info">
-                    <h2>Tu Descripcion : </h2>
-                    <p>
-                        //
-                    </p>
-                </div>
-
-                <div class="form-group col-md-8">
-                    <h3>Cambia tu contraseña</h3>
-                    <br />
-                    <label>Ingresa tu contraseña anterior</label>
-                    <input type="password" class="form-control">
-                    <label>Ingresa tu nueva contraseña</label>
-                    <input type="password" class="form-control">
-                    <label>Confirma tu contraseña nueva</label>
-                    <input type="password" class="form-control" />
-                    <br>
-                    <a href="#" class="btn btn-warning">Cambiar contraseña</a>
-                </div>
-            </div>
-        </div>
-        <!-- ROW END -->
 
 
-    </section>
-    <!-- SECTION END -->
-</div>
-<!-- CONATINER END -->
+    <g:set var="entityName" value="${message(code: 'cliente.label', default: 'Cliente')}" />
+    <title><g:message code="default.edit.label" args="[entityName]" /></title>
 
-<!-- REQUIRED SCRIPTS FILES -->
-<!-- CORE JQUERY FILE -->
-<script src="assets/js/jquery-1.11.1.js"></script>
-<!-- REQUIRED BOOTSTRAP SCRIPTS -->
-<script src="assets/js/bootstrap.js"></script>
+<body>
+<div id="edit-cliente" class="content scaffold-edit col-md-4" role="main">
+    <h3><g:message code="default.edit.label" args="[entityName]" /></h3>
+
+    <g:if test="${flash.message}">
+        <div class="message" role="status">${flash.message}</div>
+    </g:if>
+    <g:hasErrors bean="${clienteInstance}">
+        <ul class="errors" role="alert">
+            <g:eachError bean="${clienteInstance}" var="error">
+                <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
+            </g:eachError>
+        </ul>
+    </g:hasErrors>
+    <g:form url="[resource:session.cliente, action:'update']" method="PUT" >
+        <g:hiddenField name="version" value="${clienteInstance?.version}" />
+        <fieldset class="form">
+            <g:render template="form"/>
+        </fieldset>
+        <fieldset class="btn-group">
+            <g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+        </fieldset>
+    </g:form>
+    </div>
 </body>
-
 </html>
+
+

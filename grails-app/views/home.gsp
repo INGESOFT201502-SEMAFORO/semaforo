@@ -58,7 +58,7 @@
             <a href="${createLink(uri: '/equipo')}">Equipo</a>
             <g:if test="${session.cliente}" >
                 <li><a href="#">${session.cliente.nombre}</a>
-                    <ul>
+                    <ul style="padding-left: 0px">
                         <li><a href="/Semaforo/cliente/perfilusuario">Mi perfil</a></li>
                         <li><a href="">Configuración</a></li>
                         <li><g:link controller="cliente" action ="logout">Salir</g:link></li>
@@ -67,8 +67,8 @@
             </g:if>
             <g:elseif test="${session.vendedor}">
                 <li><a href="#">${session.vendedor.nombre}</a>
-                    <ul>
-                        <li><a href="">Mi Perfil</a></li>
+                    <ul style="padding-left: 0px">
+                        <li><a href="/Semaforo/vendedor/perfilvendedor/${session.vendedor.id}">Mi Perfil</a></li>
                         <li><a href="">Configuración</a></li>
                         <li><g:link controller="vendedor" action="logout">Salir</g:link></li>
                     </ul>
@@ -173,7 +173,7 @@
                     <div class="ch-item ch-img-6" id="circle6">
                         <div class="ch-info">
                             <h3>Citas</h3>
-                            <p>Revisa y gestiona tus Citas<g:link controller="seguro" action ="cargarDatos">Consultar</g:link></p>
+                            <p>Revisa y gestiona tus Citas<g:link controller="seguro" action ="">Consultar</g:link></p>
                         </div>
                     </div>
                 </li>

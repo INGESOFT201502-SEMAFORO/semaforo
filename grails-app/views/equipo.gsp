@@ -74,8 +74,8 @@
 <br><br><br>
 <section id="mostrar">
   <h2>Equipo</h2>
-  <p>Nuestro Equipo de Desarrollo de Semáforo, puedes encontrarlos en redes sociales...</p>
-  <p>Tan solo debes parar el puntero sobre el área de la foto deseada... ¿Apuestos verdad? :)</p>
+  <p>Nuestro Equipo de Desarrollo de Semáforo, puedes encontrarlos en redes sociales.</p>
+  <p>Tan solo debes parar el puntero sobre el área de la foto deseada para obtener mas información.</p>
 </section>
 
 <div class="container">
@@ -86,8 +86,8 @@
       <li>
         <div class="ch-item">
           <div class="ch-info">
-            <h3>Samuel Pérez Gaitán</h3>
-            <p>Desarrollo Html, CSS <a href="https://www.facebook.com/samusstinkguitar" target="_blank">Contacto en Facebook</a></p>
+            <h3>Samuel Leonardo Perez</h3>
+            <p>Desarrollo Html - CSS <a href="https://www.facebook.com/samusstinkguitar" target="_blank">Contacto en Facebook</a></p>
           </div>
           <div class="ch-thumb ch-img-1"></div>
         </div>
@@ -95,8 +95,8 @@
       <li>
         <div class="ch-item">
           <div class="ch-info">
-            <h3>David Rubio Barón</h3>
-            <p>Desarrollo - Testing, Html, CSS<a href="https://www.facebook.com/Davalexer9304" target="_blank">Contacto en Facebook</a></p>
+            <h3>David Alexander Rubio</h3>
+            <p>Testing - Desarrollo Html<a href="https://www.facebook.com/Davalexer9304" target="_blank">Contacto en Facebook</a></p>
           </div>
           <div class="ch-thumb ch-img-2"></div>
         </div>
@@ -104,7 +104,7 @@
       <li>
         <div class="ch-item">
           <div class="ch-info">
-            <h3>Cesar Silva Guevara</h3>
+            <h3>Cesar Andres Silva</h3>
             <p>Desarrollo - Consultas Vehículos<a href="https://www.facebook.com/Cesar.A.10" target="_blank">Contacto en Facebook</a></p>
           </div>
           <div class="ch-thumb ch-img-3"></div>
