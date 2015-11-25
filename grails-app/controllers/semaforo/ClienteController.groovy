@@ -19,7 +19,7 @@ class ClienteController {
 
     }
 
-    def vistainicioeditar ={
+    def perfileditar ={
 
 
     }

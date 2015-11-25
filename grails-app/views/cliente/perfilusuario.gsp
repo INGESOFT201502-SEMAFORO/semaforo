@@ -6,7 +6,7 @@
 --%>
 
 
-<html lang="en">
+< lang="en">
 <head>
     <title>Semáforo - Mi Perfil</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -17,6 +17,7 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+    <asset:stylesheet src="vehReqView.css"/>
     <asset:stylesheet src="bootstrap.min.css"/>
     <asset:stylesheet src="demo.css"/>
     <asset:stylesheet src="common.css"/>
@@ -65,7 +66,7 @@
 </head>
 
 
-<body>
+<>
 <header>
 
 
@@ -100,6 +101,86 @@
 
 <br><br><br><br><br><br>
 
+
+
+<div class="container">
+    <div class="row-fluid">
+        <div id="show-cliente" class="content scaffold-show container" role="main">
+<g:img dir="images" file="profile_pic.jpg"/>
+
+
+
+<div class="col-md-4">
+
+    <fieldset class="form" style="border: 0px;">
+        <div class="form-group">
+            <div class="fieldcontain" ${hasErrors(bean: clienteInstance, field: 'nombre', 'error')}>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" class="form-control" value="${session.cliente.nombre}" maxlength="50" id="nombre">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="fieldcontain" ${hasErrors(bean: clienteInstance, field: 'usuario', 'error')}>
+                <label for="usuario">Usuario Registrado</label>
+                <input type="text" name="usuario" class="form-control" value="${session.cliente.usuario}" maxlength="50" id="usuario">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="fieldcontain" ${hasErrors(bean: clienteInstance, field: 'email', 'error')}>
+                <label for="correo">Email Registrado</label>
+                <input type="email" name="correo" class="form-control" value="${session.cliente.correo}" maxlength="50" id="correo">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="fieldcontain" ${hasErrors(bean: clienteInstance, field: 'password', 'error')}>
+                <label for="nombre">Contraseña</label>
+                <input type="text" name="contraseña" class="form-control" value="${session.cliente.password}" maxlength="50" id="password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="fieldcontain" ${hasErrors(bean: clienteInstance, field: 'edad', 'error')}>
+                <label for="edad">Edad</label>
+                <input type="number" name="edad" min="18" class="form-control" value="${session.cliente.edad}" id="edad">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="fieldcontain=" ${hasErrors(bean: clienteInstance, field: 'cedula, error')}>
+                <label for="cedula">Cedula</label>
+                <input type="number" name="cedula" class="form-control" value="${session.cliente.cedula}" disabled id="cedula">
+            </div>
+        </div>
+
+    </fieldset>
+
+
+
+
+
+
+
+    <div class="col-md-4">
+
+        <%--${Vehiculo.findByCliente(session.cliente)}--%>
+
+    <form>
+        <fieldset class="btn-group">
+            <a href="/Semaforo/cliente/perfileditar" class="edit btn">Actualizar Datos</a>
+        </fieldset>
+    </form>
+</div>
+
+<div class="footer" role="contentinfo"></div>
+<div id="spinner" class="spinner" style="display:none;">Loading&hellip;</div>
+
+
+
+
+</div>
+</div>
+</div>
+
 </body>
+
 
 </html>
