@@ -83,7 +83,7 @@
                 </li>
             </g:if>
             <g:elseif test="${session.vendedor}">
-                <li><a href="#">${session.vendedor.nombre}</a>
+                <li><a href="#">${vendedorInstance.nombre}</a>
                     <ul style="padding-left: 0px">
                         <li><a href="/Semaforo/vendedor/perfilvendedor">Mi Perfil</a></li>
                         <li><a href="">Configuración</a></li>
@@ -118,37 +118,43 @@
                         <div class="form-group">
                             <div class="fieldcontain" ${hasErrors(bean: vendedorInstance, field: 'usuario', 'error')}>
                                 <label for="usuario">Usuario Registrado</label>
-                                <input type="text" name="usuario" class="form-control" value="${session.vendedor.usuario}" maxlength="50" id="usuario">
+                                <input type="text" name="usuario" class="form-control" value="${vendedorInstance?.usuario}" maxlength="50" id="usuario"
+                                style="border: 1px solid rgba(128,128,128,0.9); background: rgba(0,0,0,0.4); color: white">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="fieldcontain" ${hasErrors(bean: vendedorInstance, field: 'nombre', 'error')}>
                                 <label for="nombre">Nombre</label>
-                                <input type="text" name="nombre" class="form-control" value="${session.vendedor.nombre}" maxlength="50" id="nombre">
+                                <input type="text" name="nombre" class="form-control" value="${vendedorInstance?.nombre}" maxlength="50" id="nombre"
+                                 style="border: 1px solid rgba(128,128,128,0.9); background: rgba(0,0,0,0.4); color: white">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="fieldcontain" ${hasErrors(bean: vendedorInstance, field: 'email', 'error')}>
                                 <label for="correo">Email Registrado</label>
-                                <input type="email" name="correo" class="form-control" value="${session.vendedor.correo}" maxlength="50" id="correo">
+                                <input type="email" name="correo" class="form-control" value="${vendedorInstance?.correo}" maxlength="50" id="correo"
+                                 style="border: 1px solid rgba(128,128,128,0.9); background: rgba(0,0,0,0.4); color: white">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="fieldcontain" ${hasErrors(bean: vendedorInstance, field: 'edad', 'error')}>
                                 <label for="edad">Edad</label>
-                                <input type="number" name="edad" min="18" class="form-control" value="${session.vendedor.edad}" id="edad">
+                                <input type="number" name="edad" min="18" class="form-control" value="${vendedorInstance?.edad}" id="edad"
+                                 style="border: 1px solid rgba(128,128,128,0.9); background: rgba(0,0,0,0.4); color: white">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="fieldcontain=" ${hasErrors(bean: vendedorInstance, field: 'cedula, error')}>
                                 <label for="cedula">Cedula</label>
-                                <input type="number" name="cedula" class="form-control" value="${session.vendedor.cedula}" disabled id="cedula">
+                                <input type="number" name="cedula" class="form-control" value="${vendedorInstance?.cedula}" disabled id="cedula"
+                                 style="border: 1px solid rgba(128,128,128,0.9); background: rgba(100,0,0,0.4); color: white">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="fieldcontain" ${hasErrors(bean: vendedorInstance, field: 'empresa', 'error')}>
                                 <label for="empresa">Empresa</label>
-                                <input type="text" name="empresa" class="form-control" value="${Vendedor.get(session.vendedor.id).empresa?.nombre}" disabled id="empresa">
+                                <input type="text" name="empresa" class="form-control" value="${Vendedor.get(session.vendedor.id).empresa?.nombre}" disabled id="empresa"
+                                 style="border: 1px solid rgba(128,128,128,0.9); background: rgba(100,0,0,0.4); color: white">
                             </div>
                         </div>
                     </fieldset>
@@ -179,9 +185,11 @@
 
             <div class="col-md-8">
                 <div class="alert alert-info">
-                    <h2>Tu Descripcion : </h2>
+                    <h2>Perfil de vendedor: </h2>
                     <p>
-                        //
+                        Aquí puedes ver y modificar tus datos personales que corresponden a tu
+                        inscripción en nuestro sitio. También puedes añadir una foto de perfil y
+                        cambiar tu contraseña.
                     </p>
                 </div>
 
@@ -189,11 +197,11 @@
                     <h3>Cambia tu contraseña</h3>
                     <br />
                     <label>Ingresa tu contraseña anterior</label>
-                    <input type="password" class="form-control">
+                    <input type="password" class="form-control" style="border: 1px solid rgba(128,128,128,0.9); background: rgba(0,0,0,0.4); color: white">
                     <label>Ingresa tu nueva contraseña</label>
-                    <input type="password" class="form-control">
+                    <input type="password" class="form-control" style="border: 1px solid rgba(128,128,128,0.9); background: rgba(0,0,0,0.4); color: white">
                     <label>Confirma tu contraseña nueva</label>
-                    <input type="password" class="form-control" />
+                    <input type="password" class="form-control" style="border: 1px solid rgba(128,128,128,0.9); background: rgba(0,0,0,0.4); color: white" />
                     <br>
                     <a href="#" class="btn btn-warning">Cambiar contraseña</a>
                 </div>

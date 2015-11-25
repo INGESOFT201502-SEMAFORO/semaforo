@@ -68,7 +68,7 @@
             <g:elseif test="${session.vendedor}">
                 <li><a href="#">${session.vendedor.nombre}</a>
                     <ul style="padding-left: 0px">
-                        <li><a href="/Semaforo/vendedor/perfilvendedor">Mi Perfil</a></li>
+                        <li><a href="/Semaforo/vendedor/perfilvendedor/${session.vendedor.id}">Mi Perfil</a></li>
                         <li><a href="">Configuración</a></li>
                         <li><g:link controller="vendedor" action="logout">Salir</g:link></li>
                     </ul>
@@ -170,7 +170,7 @@
                     <div class="ch-item ch-img-6" id="circle6">
                         <div class="ch-info">
                             <h3>Citas</h3>
-                            <p>Revisa y gestiona tus Citas<g:link controller="seguro" action ="cargarDatos">Consultar</g:link></p>
+                            <p>Revisa y gestiona tus Citas<g:link controller="seguro" action ="">Consultar</g:link></p>
                         </div>
                     </div>
                 </li>

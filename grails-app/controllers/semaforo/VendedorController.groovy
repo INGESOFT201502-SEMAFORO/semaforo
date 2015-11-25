@@ -10,7 +10,9 @@ class VendedorController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    def perfilvendedor = {}
+    def perfilvendedor (Vendedor vendedorInstance) {
+        respond vendedorInstance
+    }
 
     def inicio = {
         def vendedores = Vendedor.list()
@@ -28,8 +30,8 @@ class VendedorController {
     def login() {
         def vendedor = Vendedor.findByCorreoAndPassword(params.correo, params.password)
         if (vendedor == null) {
-            flash.message = "Vendedor no registrado"
-            redirect action: inicio
+            request.message = "Vendedor no registrado, por favor intenta de nuevo o registrate"
+            render view: '../ingresar'
         } else {
             flash.message = "Inicio de sesión correcto ${vendedor.correo}"
             session.vendedor = vendedor
@@ -120,7 +122,7 @@ class VendedorController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'Vendedor.label', default: 'Vendedor'), vendedorInstance.id])
-                redirect vendedorInstance
+                redirect uri: ('/vendedor/perfilvendedor/' + vendedorInstance.id.toString())
             }
             '*'{ respond vendedorInstance, [status: OK] }
         }
