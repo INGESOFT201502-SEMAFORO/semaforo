@@ -28,7 +28,11 @@
 					
 						<g:sortableColumn property="lugar" title="${message(code: 'cita.lugar.label', default: 'Lugar')}" />
 					
-						<th><g:message code="cita.cliente.label" default="Cliente" /></th>
+						<g:sortableColumn property="estado" title="${message(code: 'cita.estado.label', default: 'Estado')}" />
+					
+						<th><g:message code="cita.seguro.label" default="Seguro" /></th>
+					
+						<th><g:message code="cita.vehiculo.label" default="Vehiculo" /></th>
 					
 					</tr>
 				</thead>
@@ -40,7 +44,11 @@
 					
 						<td>${fieldValue(bean: citaInstance, field: "lugar")}</td>
 					
-						<td>${fieldValue(bean: citaInstance, field: "cliente")}</td>
+						<td>${fieldValue(bean: citaInstance, field: "estado")}</td>
+					
+						<td>${fieldValue(bean: citaInstance, field: "seguro")}</td>
+					
+						<td>${fieldValue(bean: citaInstance, field: "vehiculo")}</td>
 					
 					</tr>
 				</g:each>

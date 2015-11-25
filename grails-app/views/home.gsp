@@ -126,6 +126,9 @@
                 </li>
             </ul>
         </section>
+
+        <g:link class="btn btn-default col-md-4 col-md-offset-4" controller="cita" action="indexApp">mis citas</g:link>
+        <br><br><br>
     </div>
 
 

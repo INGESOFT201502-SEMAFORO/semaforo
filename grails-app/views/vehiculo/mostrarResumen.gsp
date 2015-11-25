@@ -16,6 +16,11 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
     <asset:stylesheet src="vehReqView.css"/>
     <asset:stylesheet src="bootstrap.min.css"/>
@@ -29,6 +34,13 @@
     <asset:javascript src="bootstrap-select.js"/>
     <g:set var="entityName" value="${message(code: 'vehiculo.label', default: 'Vehiculo')}" />
     <title><g:message code="default.show.label" args="[entityName]" /></title>
+    <script>
+        $(function() {
+            $( "#datepicker" ).datepicker({
+                timeFormat: "hh:mm tt"
+            });
+        });
+    </script>
 </head>
 <body>
 <header>
@@ -205,6 +217,63 @@
 
 <div class="container">
     <h3>Cita de revision</h3>
+    <p>Solicita una cita para revisar tu vehículo</p>
+
+    <g:form url="[resource:citaInstance, controller:'cita',  action:'saveApp']" class="col-md-4">
+        <fieldset class="form">
+
+            <div class="form-group fieldcontain ${hasErrors(bean: citaInstance, field: 'fecha', 'error')} required">
+                <label for="fecha">
+                    <g:message code="cita.fecha.label" default="Fecha" />
+                    <span class="required-indicator">*</span>
+                </label>
+                <g:datePicker class="form-control" name="fecha" precision="hour"  value="${citaInstance?.fecha}"  />
+
+            </div>
+
+            <div class="form-group fieldcontain ${hasErrors(bean: citaInstance, field: 'lugar', 'error')} required">
+                <label for="lugar">
+                    <g:message code="cita.lugar.label" default="Lugar" />
+                    <span class="required-indicator">*</span>
+                </label>
+                <g:textField class="form-control" name="lugar" required="" value="${citaInstance?.lugar}"/>
+
+            </div>
+
+            <div class="form-group fieldcontain ${hasErrors(bean: citaInstance, field: 'estado', 'error')} required">
+                <label for="estado">
+                    <g:message code="cita.estado.label" default="Estado" />
+                    <span class="required-indicator">*</span>
+                </label>
+                <g:textField class="form-control" name="estado" required="" value="Pendiente" readonly=""/>
+
+            </div>
+
+            <div class="hidden">
+                <div class="fieldcontain ${hasErrors(bean: citaInstance, field: 'seguro', 'error')} required">
+                    <label for="seguro">
+                        <g:message code="cita.seguro.label" default="Seguro" />
+                        <span class="required-indicator">*</span>
+                    </label>
+                    <g:select id="seguro" name="seguro.id" from="${semaforo.Seguro.get(vehiculoInstance?.seguro?.id)}" optionKey="id" required="" value="${citaInstance?.seguro?.id}" class="many-to-one"/>
+
+                </div>
+
+                <div class="fieldcontain ${hasErrors(bean: citaInstance, field: 'vehiculo', 'error')} required">
+                    <label for="vehiculo">
+                        <g:message code="cita.vehiculo.label" default="Vehiculo" />
+                        <span class="required-indicator">*</span>
+                    </label>
+                    <g:select id="vehiculo" name="vehiculo.id" from="${semaforo.Vehiculo.get(vehiculoInstance?.id)}" optionKey="id" required="" value="${citaInstance?.vehiculo?.id}" class="many-to-one"/>
+
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="buttons">
+            <g:submitButton name="create" class="btn btn-success" value="Solicitar" />
+        </fieldset>
+    </g:form>
+
 </div>
 
 </body>

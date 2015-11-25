@@ -41,11 +41,29 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${citaInstance?.cliente}">
+				<g:if test="${citaInstance?.estado}">
 				<li class="fieldcontain">
-					<span id="cliente-label" class="property-label"><g:message code="cita.cliente.label" default="Cliente" /></span>
+					<span id="estado-label" class="property-label"><g:message code="cita.estado.label" default="Estado" /></span>
 					
-						<span class="property-value" aria-labelledby="cliente-label"><g:link controller="cliente" action="show" id="${citaInstance?.cliente?.id}">${citaInstance?.cliente?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="estado-label"><g:fieldValue bean="${citaInstance}" field="estado"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${citaInstance?.seguro}">
+				<li class="fieldcontain">
+					<span id="seguro-label" class="property-label"><g:message code="cita.seguro.label" default="Seguro" /></span>
+					
+						<span class="property-value" aria-labelledby="seguro-label"><g:link controller="seguro" action="show" id="${citaInstance?.seguro?.id}">${citaInstance?.seguro?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${citaInstance?.vehiculo}">
+				<li class="fieldcontain">
+					<span id="vehiculo-label" class="property-label"><g:message code="cita.vehiculo.label" default="Vehiculo" /></span>
+					
+						<span class="property-value" aria-labelledby="vehiculo-label"><g:link controller="vehiculo" action="show" id="${citaInstance?.vehiculo?.id}">${citaInstance?.vehiculo?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

@@ -110,6 +110,7 @@ class VehiculoController {
     }
 
     def mostrarResumen(Vehiculo vehiculoInstance){
+        params.fecha
         respond vehiculoInstance
     }
 
